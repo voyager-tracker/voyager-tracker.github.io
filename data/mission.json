@@ -1,0 +1,86 @@
+{
+  "goldenRecord": {
+    "title_en": "The Golden Record",
+    "title_zh": "航海家金唱片",
+    "title_es": "El Disco de Oro",
+    "title_ja": "ゴールデンレコード",
+    "summary_en": "Each Voyager carries a 12-inch gold-plated copper phonograph record containing sounds and images intended to portray the diversity of life and culture on Earth to any intelligent extraterrestrial life form, or far future humans, who may find it.",
+    "summary_zh": "兩艘航海家號都攜帶一張12吋鍍金銅質唱片，內容包含聲音與影像，用以向可能發現它的外星智慧生命或未來人類展示地球生命與文化的多樣性。",
+    "summary_es": "Cada Voyager lleva un disco fonográfico de cobre chapado en oro de 30 cm que contiene sonidos e imágenes destinados a mostrar la diversidad de la vida y la cultura en la Tierra a cualquier forma de vida extraterrestre inteligente, o a humanos de un futuro lejano, que pudiera encontrarlo.",
+    "summary_ja": "両ボイジャーは、地球上の生命と文化の多様性を、これを発見するかもしれない知的地球外生命体や遠い未来の人類に伝えるための音と画像を収めた、直径12インチの金メッキ銅製レコードを搭載している。",
+    "contents": [
+      { "en": "116 encoded images of Earth, life, and science", "zh": "116張以類比方式編碼的地球、生命與科學影像", "es": "116 imágenes codificadas de la Tierra, la vida y la ciencia", "ja": "地球・生命・科学に関する116枚の符号化画像" },
+      { "en": "Natural sounds (surf, wind, thunder, animals)", "zh": "自然聲音（海浪、風聲、雷聲、動物叫聲）", "es": "Sonidos naturales (olas, viento, truenos, animales)", "ja": "自然の音（波、風、雷、動物の鳴き声）" },
+      { "en": "Spoken greetings in 55 languages", "zh": "55種語言錄製的問候語", "es": "Saludos hablados en 55 idiomas", "ja": "55の言語による挨拶の音声" },
+      { "en": "Musical selections from different cultures and eras", "zh": "來自不同文化與時代的音樂選輯", "es": "Selecciones musicales de diferentes culturas y épocas", "ja": "さまざまな文化・時代の音楽集" },
+      { "en": "A printed message from U.S. President Jimmy Carter and UN Secretary-General Kurt Waldheim", "zh": "美國總統卡特與聯合國秘書長瓦德翰的書面訊息", "es": "Un mensaje impreso del presidente de EE. UU. Jimmy Carter y el secretario general de la ONU Kurt Waldheim", "ja": "カーター米大統領と国連事務総長ワルトハイムによる印刷メッセージ" },
+      { "en": "Playback instructions engraved on the cover in symbolic diagrams", "zh": "唱片封套以符號圖示刻有播放說明", "es": "Instrucciones de reproducción grabadas en la portada mediante diagramas simbólicos", "ja": "カバーに刻まれた図記号による再生方法の説明" }
+    ],
+    "source": "NASA Science — Voyager Mission",
+    "sourceUrl": "https://science.nasa.gov/mission/voyager/"
+  },
+  "paleBlueDot": {
+    "title_en": "Pale Blue Dot",
+    "title_zh": "淡藍色小點",
+    "title_es": "Pálido Punto Azul",
+    "title_ja": "ペイル・ブルー・ドット",
+    "date": "1990-02-14",
+    "summary_en": "On February 14, 1990, at the request of scientist Carl Sagan, Voyager 1 turned its camera back toward the inner solar system and took a family portrait of the planets, including a single pixel image of Earth from about 6 billion kilometers (3.7 billion miles) away — the famous \"Pale Blue Dot.\"",
+    "summary_zh": "1990年2月14日，應科學家卡爾．薩根之請，航海家1號回頭朝太陽系內側拍攝了一張行星「全家福」，其中包含從約60億公里（37億英里）外拍下、僅佔一個像素的地球影像，也就是著名的「淡藍色小點」。",
+    "summary_es": "El 14 de febrero de 1990, a petición del científico Carl Sagan, Voyager 1 giró su cámara hacia el sistema solar interior y tomó un retrato familiar de los planetas, incluyendo una imagen de la Tierra de un solo píxel desde unos 6.000 millones de kilómetros de distancia — el famoso «Pálido Punto Azul».",
+    "summary_ja": "1990年2月14日、科学者カール・セーガンの提案により、ボイジャー1号はカメラを太陽系内側へ向け、約60億キロメートル彼方から地球を1画素で捉えた有名な「ペイル・ブルー・ドット」を含む惑星の家族写真を撮影した。",
+    "quote_en": "Earth from billions of kilometers away.",
+    "quote_zh": "從數十億公里之外看見地球。",
+    "quote_es": "La Tierra vista desde miles de millones de kilómetros de distancia.",
+    "quote_ja": "数十億キロメートル彼方から見た地球。",
+    "credit": "NASA/JPL-Caltech",
+    "image": "PIA00452",
+    "source": "NASA Science — Voyager Mission",
+    "sourceUrl": "https://science.nasa.gov/mission/voyager/"
+  },
+  "deepSpaceNetwork": {
+    "title_en": "Deep Space Network (DSN)",
+    "title_zh": "深空網路（DSN）",
+    "title_es": "Red del Espacio Profundo (DSN)",
+    "title_ja": "深宇宙探査網（DSN）",
+    "summary_en": "NASA communicates with both Voyagers through the Deep Space Network, a system of large radio antenna complexes spaced roughly evenly around the world so at least one is always able to see the spacecraft as Earth rotates.",
+    "summary_zh": "NASA 透過深空網路（DSN）與兩艘航海家號通訊，這是一組分布於全球、間隔大致平均的大型無線電天線陣列，確保地球自轉時至少有一座能持續追蹤太空船。",
+    "summary_es": "La NASA se comunica con ambas Voyager a través de la Red del Espacio Profundo, un sistema de grandes complejos de antenas de radio distribuidos de forma casi uniforme por todo el mundo para que al menos una siempre pueda ver la sonda mientras la Tierra rota.",
+    "summary_ja": "NASAは深宇宙探査網（DSN）を通じて両ボイジャーと通信している。これは世界各地にほぼ均等に配置された大型無線アンテナ群で、地球が自転しても常にいずれかのアンテナが探査機を追跡できるようになっている。",
+    "stations": [
+      { "name": "Goldstone", "location_en": "California, USA", "location_zh": "美國加州", "location_es": "California, EE. UU.", "location_ja": "アメリカ合衆国カリフォルニア州" },
+      { "name": "Madrid", "location_en": "Spain", "location_zh": "西班牙馬德里", "location_es": "Madrid, España", "location_ja": "スペイン・マドリード" },
+      { "name": "Canberra", "location_en": "Australia", "location_zh": "澳洲坎培拉", "location_es": "Camberra, Australia", "location_ja": "オーストラリア・キャンベラ" }
+    ],
+    "source": "NASA Science — Voyager Mission",
+    "sourceUrl": "https://science.nasa.gov/mission/voyager/"
+  },
+  "missionUpdates": [
+    {
+      "date": "2025-02-01",
+      "title_en": "Voyager 1's Cosmic Ray Subsystem (CRS) deactivated",
+      "title_zh": "航海家1號的宇宙射線子系統（CRS）關閉",
+      "title_es": "Se desactivó el Subsistema de Rayos Cósmicos (CRS) de Voyager 1",
+      "title_ja": "ボイジャー1号の宇宙線検出装置（CRS）が停止",
+      "summary_en": "As part of an ongoing power-conservation plan for the aging RTGs, the mission team deactivated Voyager 1's Cosmic Ray Subsystem in February 2025.",
+      "summary_zh": "為因應 RTG 電力持續衰減，任務團隊於2025年2月關閉了航海家1號的宇宙射線子系統，以節省電力供其他儀器與系統使用。",
+      "summary_es": "Como parte de un plan continuo de conservación de energía para los envejecidos RTG, el equipo de la misión desactivó el Subsistema de Rayos Cósmicos de Voyager 1 en febrero de 2025.",
+      "summary_ja": "老朽化したRTGの電力を節約する継続的な計画の一環として、ミッションチームは2025年2月にボイジャー1号の宇宙線検出装置を停止した。",
+      "source": "NASA Science — Voyager Instruments",
+      "sourceUrl": "https://science.nasa.gov/mission/voyager/instruments/"
+    },
+    {
+      "date": "2018-12-10",
+      "title_en": "NASA confirms Voyager 2 has entered interstellar space",
+      "title_zh": "NASA 確認航海家2號已進入星際空間",
+      "title_es": "La NASA confirma que Voyager 2 ha entrado en el espacio interestelar",
+      "title_ja": "NASA、ボイジャー2号の星間空間到達を確認",
+      "summary_en": "NASA announced that Voyager 2 crossed the heliopause on November 5, 2018, becoming the second human-made object to enter interstellar space.",
+      "summary_zh": "NASA 宣布航海家2號已於2018年11月5日飛越日球層頂，成為第二個進入星際空間的人造物體。",
+      "summary_es": "La NASA anunció que Voyager 2 cruzó la heliopausa el 5 de noviembre de 2018, convirtiéndose en el segundo objeto artificial en entrar en el espacio interestelar.",
+      "summary_ja": "NASAは、ボイジャー2号が2018年11月5日にヘリオポーズを越え、星間空間に到達した2番目の人工物になったと発表した。",
+      "source": "NASA Science — Voyager 2",
+      "sourceUrl": "https://science.nasa.gov/mission/voyager/voyager-2/"
+    }
+  ]
+}

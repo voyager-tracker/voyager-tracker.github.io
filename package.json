@@ -1,0 +1,15 @@
+{
+  "name": "voyager-tracker-tools",
+  "private": true,
+  "description": "Build/data tooling for the VoyagerTracker static site (the site itself ships as plain HTML/CSS/JS with no build step).",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test",
+    "fetch:horizons": "tsx scripts/fetch-horizons.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

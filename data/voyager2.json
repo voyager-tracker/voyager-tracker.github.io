@@ -1,0 +1,85 @@
+{
+  "id": "voyager2",
+  "name": { "en": "Voyager 2", "zh": "航海家2號", "es": "Voyager 2", "ja": "ボイジャー2号" },
+  "launch": {
+    "date": "1977-08-20",
+    "vehicle": "Titan IIIE-Centaur",
+    "site_en": "Cape Canaveral, Florida",
+    "site_zh": "美國佛羅里達州卡納維爾角",
+    "site_es": "Cabo Cañaveral, Florida",
+    "site_ja": "アメリカ合衆国フロリダ州ケープカナベラル"
+  },
+  "massKg": 721.9,
+  "power": {
+    "source_en": "3 × Radioisotope Thermoelectric Generators (RTG)",
+    "source_zh": "3 具放射性同位素熱電發電機（RTG）",
+    "source_es": "3 × Generadores Termoeléctricos de Radioisótopos (RTG)",
+    "source_ja": "放射性同位体熱電発電機（RTG）3基",
+    "declineWattsPerYear": 4
+  },
+  "trajectory": [
+    { "year": 1977, "label_en": "Launch", "label_zh": "發射", "label_es": "Lanzamiento", "label_ja": "打ち上げ" },
+    { "year": 1979, "label_en": "Jupiter Flyby", "label_zh": "飛越木星", "label_es": "Sobrevuelo de Júpiter", "label_ja": "木星フライバイ" },
+    { "year": 1981, "label_en": "Saturn Flyby", "label_zh": "飛越土星", "label_es": "Sobrevuelo de Saturno", "label_ja": "土星フライバイ" },
+    { "year": 1986, "label_en": "Uranus Flyby", "label_zh": "飛越天王星", "label_es": "Sobrevuelo de Urano", "label_ja": "天王星フライバイ" },
+    { "year": 1989, "label_en": "Neptune Flyby", "label_zh": "飛越海王星", "label_es": "Sobrevuelo de Neptuno", "label_ja": "海王星フライバイ" },
+    { "year": 2018, "label_en": "Entered Interstellar Space", "label_zh": "進入星際空間", "label_es": "Entra en el espacio interestelar", "label_ja": "星間空間に到達" }
+  ],
+  "interstellar": {
+    "date": "2018-11-05",
+    "sourceNote_en": "NASA confirmed Voyager 2 crossed the heliopause on Nov 5, 2018 (announced Dec 10, 2018). Voyager 2 is the only spacecraft to have visited Uranus and Neptune.",
+    "sourceNote_zh": "NASA 確認航海家2號於2018年11月5日飛越日球層頂（於同年12月10日對外公布）。航海家2號是唯一造訪過天王星與海王星的太空船。",
+    "sourceNote_es": "La NASA confirmó que Voyager 2 cruzó la heliopausa el 5 de noviembre de 2018 (anunciado el 10 de diciembre de 2018). Voyager 2 es la única sonda que ha visitado Urano y Neptuno.",
+    "sourceNote_ja": "NASAはボイジャー2号が2018年11月5日にヘリオポーズを越えたことを確認した（発表は同年12月10日）。ボイジャー2号は天王星と海王星を訪れた唯一の探査機である。"
+  },
+  "direction": {
+    "eclipticAngleDeg": 48,
+    "hemisphere": "south",
+    "note_en": "About 48° south of the ecliptic plane, toward the constellations Sagittarius and Pavo.",
+    "note_zh": "位於黃道面以南約 48 度，朝人馬座與孔雀座方向前進。",
+    "note_es": "Unos 48° al sur del plano de la eclíptica, hacia las constelaciones de Sagitario y Pavo.",
+    "note_ja": "黄道面から南へ約48度、いて座とくじゃく座の方向へ進んでいる。"
+  },
+  "escapeRateAUyr": 3.174,
+  "speedKmS": 15.3,
+  "speedKmH": 55000,
+  "baseline": {
+    "date": "2026-08-25",
+    "distanceFromEarthKm": 21417468516,
+    "distanceFromEarthAU": 143.167,
+    "distanceFromSunAU": 143.764,
+    "signalDelayOneWayHours": 19.84,
+    "source": "NASA JPL Horizons API",
+    "sourceUrl": "https://ssd.jpl.nasa.gov/horizons/",
+    "note_en": "Geometric state vector from JPL Horizons (no light-time correction), target -32, epoch 2026-08-25 00:00 TDB.",
+    "note_zh": "取自 NASA JPL Horizons 之幾何狀態向量（未做光行時間修正），目標代號 -32，時間點為 2026-08-25 00:00 TDB。",
+    "note_es": "Vector de estado geométrico de JPL Horizons (sin corrección por tiempo de luz), objetivo -32, época 2026-08-25 00:00 TDB.",
+    "note_ja": "JPL Horizonsによる幾何学的状態ベクトル（光行時間補正なし）、ターゲット -32、時刻 2026-08-25 00:00 TDB。"
+  },
+  "status": {
+    "en": "Extended Mission — Interstellar Space",
+    "zh": "延伸任務中 — 位於星際空間",
+    "es": "Misión extendida — Espacio interestelar",
+    "ja": "延長ミッション中 — 星間空間"
+  },
+  "instruments": {
+    "totalExperiments": 11,
+    "active": [
+      { "code": "MAG", "name_en": "Magnetometer", "name_zh": "磁強計", "name_es": "Magnetómetro", "name_ja": "磁力計" },
+      { "code": "PWS", "name_en": "Plasma Wave Subsystem", "name_zh": "電漿波譜儀", "name_es": "Subsistema de Ondas de Plasma", "name_ja": "プラズマ波動観測装置" },
+      { "code": "CRS", "name_en": "Cosmic Ray Subsystem", "name_zh": "宇宙射線子系統", "name_es": "Subsistema de Rayos Cósmicos", "name_ja": "宇宙線検出装置", "note_en": "Planned deactivation in 2026", "note_zh": "計畫於 2026 年關閉", "note_es": "Desactivación prevista en 2026", "note_ja": "2026年に停止予定" }
+    ],
+    "inactive": [
+      { "code": "LECP", "name_en": "Low-Energy Charged Particle Instrument", "name_zh": "低能帶電粒子儀", "name_es": "Instrumento de Partículas Cargadas de Baja Energía", "name_ja": "低エネルギー荷電粒子検出装置" },
+      { "code": "PLS", "name_en": "Plasma Science", "name_zh": "電漿科學儀", "name_es": "Ciencia del Plasma", "name_ja": "プラズマ観測装置" },
+      { "code": "ISS", "name_en": "Imaging Science Subsystem", "name_zh": "成像科學子系統", "name_es": "Subsistema de Imágenes Científicas", "name_ja": "撮像科学観測装置" },
+      { "code": "IRIS", "name_en": "Infrared Interferometer Spectrometer", "name_zh": "紅外線干涉光譜儀", "name_es": "Espectrómetro Interferómetro Infrarrojo", "name_ja": "赤外干渉分光計" },
+      { "code": "PPS", "name_en": "Photopolarimeter", "name_zh": "光偏振計", "name_es": "Fotopolarímetro", "name_ja": "光偏光計" },
+      { "code": "PRA", "name_en": "Planetary Radio Astronomy", "name_zh": "行星無線電天文儀", "name_es": "Radioastronomía Planetaria", "name_ja": "惑星電波天文観測装置" },
+      { "code": "UVS", "name_en": "Ultraviolet Spectrometer", "name_zh": "紫外線分光計", "name_es": "Espectrómetro Ultravioleta", "name_ja": "紫外分光計" }
+    ],
+    "source": "NASA Science — Voyager Instruments",
+    "sourceUrl": "https://science.nasa.gov/mission/voyager/instruments/"
+  },
+  "color": "#ffb84f"
+}

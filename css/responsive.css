@@ -1,0 +1,30 @@
+@media (max-width: 900px) {
+  .methodology-grid { grid-template-columns: 1fr 1fr; }
+  .detail-grid, .sources-grid { grid-template-columns: 1fr; }
+  .pbd-block { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu { position: fixed; top: 62px; left: 0; right: 0; background: rgba(4,7,17,0.98); flex-direction: column; gap: 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; border-bottom: 1px solid var(--c-border); }
+  .navbar__menu.open { max-height: 480px; }
+  .navbar__menu li { border-bottom: 1px solid var(--c-border); }
+  .navbar__menu a { display: block; padding: 14px 24px; }
+  .nav-toggle { display: inline-flex; }
+  .lang-toggle-btn { padding: 8px 12px; min-width: 44px; }
+  .edition-toggle { padding: 4px 8px; font-size: 0.7rem; }
+  .navbar { padding: 10px 14px; }
+  .navbar__brand-main { font-size: 0.9rem; }
+
+  .tracker-grid, .odometer-grid, .trajectory-grid, .signal-grid,
+  .science-grid, .power-grid, .status-grid { grid-template-columns: 1fr; }
+
+  .hero__craft-row { gap: 30px; }
+  .section { padding: 50px 16px; }
+  .methodology-grid { grid-template-columns: 1fr; }
+  table.compare-table { font-size: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

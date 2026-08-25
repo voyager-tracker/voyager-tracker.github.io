@@ -1,0 +1,15 @@
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+.tracker-card, .odometer-card, .glass-card, .gallery-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tracker-card:hover, .odometer-card:hover, .gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .tracker-card:hover, .odometer-card:hover, .gallery-item:hover { transform: none; }
+}

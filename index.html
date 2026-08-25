@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-site-root="./">
+<head>
+<script>window.SITE_LANG = 'en';</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voyager 1 & Voyager 2 Tracker | Where Are They Now?</title>
+<meta name="description" content="Track Voyager 1 and Voyager 2 together: live-estimated distance from Earth and the Sun, speed, signal delay, interstellar space status, and NASA mission data for humanity's farthest spacecraft.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voyager-tracker.github.io/">
+<link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+
+<link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/zh/">
+<link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/es/">
+<link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/ja/">
+<link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Voyager 1 & Voyager 2 Tracker | Where Are They Now?">
+<meta property="og:description" content="Track both Voyager spacecraft together — distance, speed, signal delay, and interstellar status, based on official NASA data.">
+<meta property="og:url" content="https://voyager-tracker.github.io/">
+<meta property="og:image" content="https://images-assets.nasa.gov/image/PIA26353/PIA26353~orig.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voyager 1 & Voyager 2 Tracker">
+<meta name="twitter:description" content="Track both Voyager spacecraft together — distance, speed, signal delay, and interstellar status, based on official NASA data.">
+<meta name="twitter:image" content="https://images-assets.nasa.gov/image/PIA26353/PIA26353~orig.jpg">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<!-- Google AdSense: Auto ads (Google automatically selects ad placement) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1512317781873771"
+     crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Voyager 1 & Voyager 2 Tracker",
+      "url": "https://voyager-tracker.github.io/",
+      "inLanguage": ["en", "zh-Hant", "es", "ja"]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Voyager 1 & Voyager 2 Tracker | Where Are They Now?",
+      "description": "Track Voyager 1 and Voyager 2 together using official NASA mission data.",
+      "url": "https://voyager-tracker.github.io/",
+      "about": ["Voyager 1", "Voyager 2", "NASA", "Interstellar Space"]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Voyager 1 and Voyager 2 Mission Data",
+      "description": "Distance, speed, signal delay and mission status data for Voyager 1 and Voyager 2, sourced primarily from NASA Science.",
+      "creator": { "@type": "Organization", "name": "NASA" },
+      "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+      "license": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+    }
+  ]
+}
+</script>
+</head>
+<body data-i18n-title="seo.title">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<div id="loading-screen" role="status" aria-live="polite">
+  <div class="loading-mark">VOYAGER 1 + 2</div>
+  <div id="loading-line">INITIALIZING DEEP SPACE TRACKER…</div>
+  <div class="loading-bar"></div>
+</div>
+
+<div id="data-link-banner" hidden role="alert">
+  <span data-i18n="error.dataLink">DEEP SPACE DATA LINK UNAVAILABLE</span> — <span data-i18n="error.dataLinkBody">Showing latest available mission data.</span>
+</div>
+
+<header class="navbar">
+  <a href="#top" class="navbar__brand">
+    <span class="navbar__brand-main" data-i18n="nav.brand">VOYAGER</span>
+    <span class="navbar__brand-sub" data-i18n="nav.brandSub">1 + 2</span>
+  </a>
+  <nav aria-label="Primary">
+    <ul class="navbar__menu" id="nav-menu">
+      <li><a href="#mission" data-i18n="nav.mission">Mission</a></li>
+      <li><a href="#tracker" data-i18n="nav.tracker">Tracker</a></li>
+      <li><a href="#compare" data-i18n="nav.compare">Compare</a></li>
+      <li><a href="#timeline" data-i18n="nav.timeline">Timeline</a></li>
+      <li><a href="#science" data-i18n="nav.science">Science</a></li>
+      <li><a href="#golden-record" data-i18n="nav.goldenRecord">Golden Record</a></li>
+      <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+      <li><a href="#sources" data-i18n="nav.sources">Sources</a></li>
+    </ul>
+  </nav>
+  <div class="navbar__right">
+    <span class="live-badge"><span class="live-dot"></span><span data-i18n="nav.live">LIVE</span></span>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-toggle-btn" data-lang="en" type="button">EN</button>
+      <button class="lang-toggle-btn" data-lang="zh" type="button">繁中</button>
+      <button class="lang-toggle-btn" data-lang="es" type="button">ES</button>
+      <button class="lang-toggle-btn" data-lang="ja" type="button">日本語</button>
+    </div>
+    <a class="edition-toggle" href="kid/">🧒 Kids Version</a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__craft-row">
+      <div class="hero__craft"><span class="hero__craft-dot hero__craft-dot--v1"></span><span>VOYAGER 1</span></div>
+      <div class="hero__craft"><span class="hero__craft-dot hero__craft-dot--v2"></span><span>VOYAGER 2</span></div>
+    </div>
+    <h1 class="hero__title" data-i18n="hero.title">VOYAGER 1 + VOYAGER 2</h1>
+    <p class="hero__subtitle" data-i18n="hero.subtitle">Humanity's Interstellar Messengers</p>
+    <p class="hero__question" data-i18n="hero.question">Where Are They Now?</p>
+    <div class="hero__taglines">
+      <span data-i18n="hero.tagline1">TWO SPACECRAFT</span>
+      <span data-i18n="hero.tagline2">ONE MISSION</span>
+      <span data-i18n="hero.tagline3">BEYOND THE HELIOSPHERE</span>
+    </div>
+    <p class="hero__scroll" data-i18n="hero.scroll">Scroll to explore the live tracker</p>
+  </section>
+
+  <!-- MISSION / TRACKER -->
+  <section class="section reveal" id="mission">
+    <h2 class="section-heading" id="tracker" data-i18n="tracker.heading">LIVE DEEP SPACE TRACKER</h2>
+    <p class="section-sub" data-i18n="tracker.sub">Positions are calculated estimates projected from the latest official NASA data. See Methodology.</p>
+    <div class="tracker-grid" id="tracker-cards"></div>
+  </section>
+
+  <!-- ODOMETERS -->
+  <section class="section section--alt reveal">
+    <h2 class="section-heading" data-i18n="odometer.heading">COSMIC ODOMETERS</h2>
+    <p class="section-sub" data-i18n="odometer.sub">Distance from Earth, updated live from an official NASA baseline + calculated velocity — not raw NASA telemetry.</p>
+    <div class="odometer-grid" id="odometer-cards"></div>
+  </section>
+
+  <!-- WHO IS FARTHER -->
+  <section class="section reveal">
+    <h2 class="section-heading" data-i18n="farther.heading">WHO IS FARTHER?</h2>
+    <div id="farther-viz"></div>
+  </section>
+
+  <!-- DISTANCE BETWEEN -->
+  <section class="section section--alt reveal">
+    <h2 class="section-heading" data-i18n="between.heading">DISTANCE BETWEEN VOYAGERS</h2>
+    <p class="section-sub" data-i18n="between.sub">Straight-line distance between the two spacecraft, from a simplified 3D geometric model (not a precision ephemeris).</p>
+    <div class="between-values" id="between-values"></div>
+  </section>
+
+  <!-- SOLAR SYSTEM -->
+  <section class="section reveal">
+    <h2 class="section-heading" data-i18n="solar.heading">WHERE ARE THEY?</h2>
+    <p class="section-sub" data-i18n="solar.sub">An educational companion to NASA's official 3D tools — not a replacement for them.</p>
+    <div class="solar-controls">
+      <div class="toggle-group">
+        <button class="toggle-btn active" id="solar-view-2d" type="button" data-i18n="solar.view2d">2D VIEW</button>
+        <button class="toggle-btn" id="solar-view-3d" type="button" data-i18n="solar.view3d">3D VIEW</button>
+      </div>
+      <div class="toggle-group">
+        <button class="toggle-btn" id="solar-scale-real" type="button" data-i18n="solar.scaleReal">REAL SCALE</button>
+        <button class="toggle-btn active" id="solar-scale-log" type="button" data-i18n="solar.scaleLog">LOG SCALE</button>
+      </div>
+      <button class="toggle-btn" id="solar-reset" type="button" data-i18n="solar.reset">Reset View</button>
+    </div>
+    <div id="solar-canvas-wrap" tabindex="0" data-i18n-attr="aria-label:solar.dragHint"><canvas id="solar-canvas" role="img" aria-label="Schematic solar system map showing the Sun, planets, and the current positions of Voyager 1 and Voyager 2"></canvas></div>
+    <div class="solar-legend">
+      <span><span class="legend-dot" style="background:#ffb84f"></span><span data-i18n="solar.legendSun">Sun</span></span>
+      <span><span class="legend-dot" style="background:#8fb4e0"></span><span data-i18n="solar.legendPlanet">Planets</span></span>
+      <span><span class="legend-dot" style="background:#4fd1ff"></span><span data-i18n="solar.legendV1">Voyager 1</span></span>
+      <span><span class="legend-dot" style="background:#ffb84f"></span><span data-i18n="solar.legendV2">Voyager 2</span></span>
+    </div>
+    <p class="scale-note" data-i18n="solar.notToScale">Logarithmic visualization — distances compressed for legibility, not to true linear scale.</p>
+    <a class="solar-eyes-link" href="https://eyes.nasa.gov/apps/solar-system/" target="_blank" rel="noopener noreferrer" data-i18n="solar.eyesLink">Explore NASA Eyes on the Solar System →</a>
+    <div class="eyes-embed" id="eyes-embed">
+      <button type="button" class="eyes-embed__load-btn" id="eyes-embed-load" data-i18n="solar.eyesLoad">Load the live 3D model (NASA Eyes)</button>
+      <p class="eyes-embed__note" data-i18n="solar.eyesLoadNote">Loads an interactive 3D tool hosted directly by NASA/JPL (eyes.nasa.gov).</p>
+    </div>
+  </section>
+
+  <!-- JOURNEYS -->
+  <section class="section section--alt reveal">
+    <h2 class="section-heading" data-i18n="journeys.heading">THEIR JOURNEYS ARE DIFFERENT</h2>
+    <div class="journeys-diagram">
+      <div class="journey-path"><span class="journey-arrow journey-arrow--v1">↗</span><strong>VOYAGER 1</strong><span data-i18n="journeys.v1">North of the ecliptic</span></div>
+      <div class="journey-path" style="font-size:2rem;">☀</div>
+      <div class="journey-path"><span class="journey-arrow journey-arrow--v2">↘</span><strong>VOYAGER 2</strong><span data-i18n="journeys.v2">South of the ecliptic</span></div>
+    </div>
+  </section>
+
+  <!-- TRAJECTORIES -->
+  <section class="section reveal">
+    <div class="trajectory-grid">
+      <div class="trajectory-card" style="--accent:#4fd1ff">
+        <h3 data-i18n="traj.v1.heading">Voyager 1 Trajectory</h3>
+        <ul class="trajectory-steps"><li data-i18n="planet.earth">Earth</li><li data-i18n="planet.jupiter">Jupiter</li><li data-i18n="planet.saturn">Saturn</li><li data-i18n="traj.v1.status">Interstellar Space — Since 2012</li></ul>
+      </div>
+      <div class="trajectory-card" style="--accent:#ffb84f">
+        <h3 data-i18n="traj.v2.heading">Voyager 2 Trajectory</h3>
+        <ul class="trajectory-steps"><li data-i18n="planet.earth">Earth</li><li data-i18n="planet.jupiter">Jupiter</li><li data-i18n="planet.saturn">Saturn</li><li data-i18n="planet.uranus">Uranus</li><li data-i18n="planet.neptune">Neptune</li><li data-i18n="traj.v2.status">Interstellar Space — Since 2018</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="section section--alt reveal" id="compare">
+    <h2 class="section-heading" data-i18n="compare.heading">VOYAGER 1 vs VOYAGER 2</h2>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th>VOYAGER 1</th><th>VOYAGER 2</th></tr></thead>
+        <tbody id="compare-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section reveal" id="timeline">
+    <h2 class="section-heading" data-i18n="timeline.heading">VOYAGER TIMELINE</h2>
+    <div class="timeline-wrap">
+      <div class="timeline-row" id="timeline-v1"></div>
+      <div class="timeline-row" id="timeline-v2"></div>
+    </div>
+  </section>
+
+  <!-- SIGNAL DELAY -->
+  <section class="section section--alt reveal">
+    <h2 class="section-heading" data-i18n="signal.heading">SIGNAL DELAY</h2>
+    <p class="signal-formula" data-i18n="signal.formula">signalDelay = distance ÷ speed of light</p>
+    <div class="signal-grid" id="signal-values"></div>
+    <p class="section-sub" data-i18n="signal.note" style="margin-top:20px;">This is only the light-travel time. It is not a guarantee of actual Deep Space Network processing or scheduling delay.</p>
+  </section>
+
+  <!-- DSN -->
+  <section class="section reveal">
+    <h2 class="section-heading" data-i18n="dsn.heading">DEEP SPACE NETWORK</h2>
+    <p class="section-sub" data-i18n="dsn.sub">NASA communicates with both Voyagers via the Deep Space Network (DSN).</p>
+    <p class="dsn-diagram">VOYAGER → DEEP SPACE → EARTH → DSN</p>
+    <div class="dsn-stations" id="dsn-stations"></div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section class="section section--alt reveal" id="science">
+    <h2 class="section-heading" data-i18n="science.heading">SCIENCE INSTRUMENTS</h2>
+    <p class="section-sub" data-i18n="science.sub">The Voyager twins originally carried 11 science instruments each. Status below reflects the latest official NASA information — not assumed.</p>
+    <figure class="spacecraft-figure">
+      <img src="https://images-assets.nasa.gov/image/PIA14111/PIA14111~thumb.jpg" alt="Model of the Voyager spacecraft (NASA/JPL-Caltech artist concept), showing the high-gain antenna, RTG boom, magnetometer boom, and science instrument platform" loading="lazy"
+           onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'gallery-fallback',textContent:'Image unavailable — view on NASA.gov'}));">
+      <figcaption>
+        <span data-i18n="spacecraft.caption">Voyager spacecraft (NASA/JPL-Caltech artist concept)</span>
+        · <a href="https://images-assets.nasa.gov/image/PIA14111/PIA14111~orig.jpg" target="_blank" rel="noopener noreferrer" data-i18n="gallery.viewFull">View full size on NASA.gov</a>
+      </figcaption>
+    </figure>
+    <div class="science-grid" id="science-grid"></div>
+  </section>
+
+  <!-- POWER -->
+  <section class="section reveal">
+    <h2 class="section-heading" data-i18n="power.heading">POWER SYSTEM</h2>
+    <p class="section-sub" data-i18n="power.sub">Each spacecraft is powered by Radioisotope Thermoelectric Generators (RTGs), which convert heat from decaying plutonium-238 into electricity.</p>
+    <p class="section-sub" data-i18n="power.decline">Combined RTG output declines by about 4 watts per year, requiring the mission team to progressively power down instruments.</p>
+    <div class="power-steps">
+      <span data-i18n="power.step1">High Power</span><span class="step-arrow">→</span>
+      <span data-i18n="power.step2">Power Management</span><span class="step-arrow">→</span>
+      <span data-i18n="power.step3">Instrument Shutdown</span><span class="step-arrow">→</span>
+      <span data-i18n="power.step4">Extended Mission</span>
+    </div>
+    <div class="power-grid" id="power-cards"></div>
+  </section>
+
+  <!-- MISSION STATUS -->
+  <section class="section section--alt reveal">
+    <h2 class="section-heading" data-i18n="status.heading">MISSION STATUS</h2>
+    <div class="status-grid" id="status-cards"></div>
+  </section>
+
+  <!-- MISSION UPDATES -->
+  <section class="section reveal">
+    <h2 class="section-heading" data-i18n="updates.heading">MISSION UPDATES</h2>
+    <p class="section-sub" data-i18n="updates.sub">Latest official NASA updates about the Voyager mission.</p>
+    <div class="updates-list" id="updates-list"></div>
+  </section>
+
+  <!-- GOLDEN RECORD -->
+  <section class="section section--alt reveal" id="golden-record">
+    <h2 class="section-heading" data-i18n="golden.heading">THE GOLDEN RECORD</h2>
+    <div class="glass-card" id="golden-record-content"></div>
+  </section>
+
+  <!-- PALE BLUE DOT -->
+  <section class="section reveal">
+    <h2 class="section-heading" data-i18n="pbd.heading">PALE BLUE DOT</h2>
+    <div class="pbd-block" id="pale-blue-dot-content"></div>
+  </section>
+
+  <!-- DETAIL PAGES -->
+  <section class="section section--alt reveal">
+    <div class="detail-grid">
+      <div class="glass-card" id="detail-v1"></div>
+      <div class="glass-card" id="detail-v2"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section reveal" id="gallery">
+    <h2 class="section-heading" data-i18n="gallery.heading">VOYAGER GALLERY</h2>
+    <div class="gallery-filters" id="gallery-filters"></div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="section section--alt reveal">
+    <h2 class="section-heading" data-i18n="methodology.heading">DATA & METHODOLOGY</h2>
+    <div class="methodology-grid">
+      <div class="methodology-card"><h4 data-i18n="methodology.official.title">Official</h4><p data-i18n="methodology.official.body">—</p></div>
+      <div class="methodology-card"><h4 data-i18n="methodology.calculated.title">Calculated</h4><p data-i18n="methodology.calculated.body">—</p></div>
+      <div class="methodology-card"><h4 data-i18n="methodology.estimated.title">Estimated</h4><p data-i18n="methodology.estimated.body">—</p></div>
+      <div class="methodology-card"><h4 data-i18n="methodology.historical.title">Historical</h4><p data-i18n="methodology.historical.body">—</p></div>
+    </div>
+    <p class="methodology-formula">estimatedDistance = baseDistance + (escapeRateAUyr × AU_KM) × elapsedYears</p>
+    <div class="methodology-grid">
+      <div class="methodology-card"><h4 data-i18n="methodology.unavailable.title">When official data is unavailable</h4><p data-i18n="methodology.unavailable.body">—</p></div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="section reveal" id="sources">
+    <h2 class="section-heading" data-i18n="sources.heading">DATA SOURCES</h2>
+    <div class="sources-grid">
+      <div>
+        <h3 data-i18n="sources.officialHeading">Primary Source — NASA</h3>
+        <ul id="sources-official"></ul>
+      </div>
+      <div>
+        <h3 data-i18n="sources.supplementaryHeading">Supplementary Reference — Wikipedia</h3>
+        <ul id="sources-supplementary"></ul>
+      </div>
+    </div>
+    <p class="sources-note" data-i18n="sources.note">NASA is the primary and authoritative source for all mission data on this site.</p>
+    <p class="sources-note" data-i18n="sources.eyes">Our visualization is an educational companion to NASA's official resources, not a replacement.</p>
+  </section>
+</main>
+
+<!-- Google AdSense Auto ads is enabled via the loader script in <head>; Google
+     chooses ad placement automatically, so no manual ad slot is needed here. -->
+
+<footer class="site-footer">
+  <h4 data-i18n="footer.title">VOYAGER 1 + 2 TRACKER</h4>
+  <p data-i18n="footer.body">An independent educational visualization based primarily on publicly available NASA mission data. NASA is the primary source of mission information. This website is not affiliated with or operated by NASA.</p>
+  <p data-i18n="footer.copyright">© 2026 Voyager Tracker</p>
+</footer>
+
+<script src="js/astronomy.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/tracker.js"></script>
+<script src="js/compare.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/solarsystem.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/content.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "note": "Cached offline fallback snapshot. Used only if the live data files (voyager1.json / voyager2.json / mission.json) fail to load.",
+  "cachedAt": "2026-08-24",
+  "voyager1": {
+    "baseline": { "date": "2026-04-17", "distanceFromEarthKm": 25900000000, "distanceFromEarthAU": 173.1 },
+    "escapeRateAUyr": 3.5,
+    "speedKmS": 16.9,
+    "status": { "en": "Extended Mission — Interstellar Space", "zh": "延伸任務中 — 位於星際空間" }
+  },
+  "voyager2": {
+    "baseline": { "date": "2017-11-05", "distanceFromEarthKm": 17378000000, "distanceFromEarthAU": 116.167 },
+    "escapeRateAUyr": 3.1,
+    "speedKmS": 15.4,
+    "status": { "en": "Extended Mission — Interstellar Space", "zh": "延伸任務中 — 位於星際空間" }
+  }
+}

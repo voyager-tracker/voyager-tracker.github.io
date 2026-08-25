@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://voyager-tracker.github.io/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/zh/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/es/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/ja/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/kid/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/kid/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/kid/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/kid/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/kid/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/kid/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/kid/zh/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/kid/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/kid/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/kid/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/kid/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/kid/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/kid/es/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/kid/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/kid/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/kid/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/kid/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/kid/"/>
+  </url>
+  <url>
+    <loc>https://voyager-tracker.github.io/kid/ja/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voyager-tracker.github.io/kid/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://voyager-tracker.github.io/kid/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://voyager-tracker.github.io/kid/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://voyager-tracker.github.io/kid/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voyager-tracker.github.io/kid/"/>
+  </url>
+</urlset>

@@ -1,0 +1,23 @@
+{
+  "official": [
+    { "name": "NASA Voyager Mission", "url": "https://science.nasa.gov/mission/voyager/" },
+    { "name": "NASA — Where are Voyager 1 and Voyager 2 Now?", "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/" },
+    { "name": "NASA — Voyager Mission Overview", "url": "https://science.nasa.gov/mission/voyager/mission-overview/" },
+    { "name": "NASA — Voyager 1", "url": "https://science.nasa.gov/mission/voyager/voyager-1/" },
+    { "name": "NASA — Voyager 2", "url": "https://science.nasa.gov/mission/voyager/voyager-2/" },
+    { "name": "NASA — Voyager Instruments", "url": "https://science.nasa.gov/mission/voyager/instruments/" },
+    { "name": "NASA — Voyager Timeline", "url": "https://science.nasa.gov/mission/voyager/timeline/" },
+    { "name": "NASA — Voyager Frequently Asked Questions", "url": "https://science.nasa.gov/mission/voyager/frequently-asked-questions/" },
+    { "name": "NASA Eyes on the Solar System", "url": "https://eyes.nasa.gov/apps/solar-system/" }
+  ],
+  "supplementary": [
+    { "name": "Wikipedia (English) — Voyager 1", "url": "https://en.wikipedia.org/wiki/Voyager_1" },
+    { "name": "Wikipedia (English) — Voyager 2", "url": "https://en.wikipedia.org/wiki/Voyager_2" },
+    { "name": "維基百科（繁體中文）— 旅行者1號", "url": "https://zh.wikipedia.org/wiki/旅行者1号" },
+    { "name": "維基百科（繁體中文）— 旅行者2號", "url": "https://zh.wikipedia.org/wiki/旅行者2号" },
+    { "name": "Wikipedia (Español) — Voyager 1", "url": "https://es.wikipedia.org/wiki/Voyager_1" },
+    { "name": "Wikipedia (Español) — Voyager 2", "url": "https://es.wikipedia.org/wiki/Voyager_2" },
+    { "name": "ウィキペディア（日本語）— ボイジャー1号", "url": "https://ja.wikipedia.org/wiki/ボイジャー1号" },
+    { "name": "ウィキペディア（日本語）— ボイジャー2号", "url": "https://ja.wikipedia.org/wiki/ボイジャー2号" }
+  ]
+}

@@ -1,0 +1,41 @@
+name: Update Voyager baseline (JPL Horizons)
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # daily at 12:00 UTC
+  workflow_dispatch: {} # allow manual runs for testing
+
+permissions:
+  contents: write
+
+jobs:
+  update-baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      # If this fails (network error, Horizons format change, sanity-check
+      # rejection, etc.) the step — and therefore the job — fails here and
+      # none of the steps below run, so data/*.json is never overwritten
+      # with bad data. See scripts/fetch-horizons.ts for the checks.
+      - name: Fetch latest Horizons ephemeris
+        run: npx tsx scripts/fetch-horizons.ts
+
+      - name: Commit and push if the baseline changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/voyager1.json data/voyager2.json; then
+            echo "Baseline unchanged (already up to date) — nothing to commit."
+            exit 0
+          fi
+          git add data/voyager1.json data/voyager2.json
+          git commit -m "Update Voyager baseline from JPL Horizons ($(date -u +%Y-%m-%d))"
+          git push
