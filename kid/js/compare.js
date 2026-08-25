@@ -25,9 +25,9 @@ function renderCompare() {
     [t('compare.row.speed'), `${v1.speedKmS} ${t('unit.kmS')}`, `${v2.speedKmS} ${t('unit.kmS')}`],
     [t('compare.row.signalDelay'), formatHours(e1.delayOneWay, lang), formatHours(e2.delayOneWay, lang)],
     [t('compare.row.interstellar'), v1.interstellar.date, v2.interstellar.date],
-    [t('compare.row.status'), v1.status[lang], v2.status[lang]],
+    [t('compare.row.status'), v1.status[lang + '_kid'] || v1.status[lang], v2.status[lang + '_kid'] || v2.status[lang]],
     [t('compare.row.instruments'), activeCount(v1), activeCount(v2)],
-    [t('compare.row.direction'), v1.direction['note_' + lang], v2.direction['note_' + lang]]
+    [t('compare.row.direction'), v1.direction['note_' + lang + '_kid'] || v1.direction['note_' + lang], v2.direction['note_' + lang + '_kid'] || v2.direction['note_' + lang]]
   ];
   body.innerHTML = rows.map((r) => `<tr><th scope="row">${r[0]}</th><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
 }

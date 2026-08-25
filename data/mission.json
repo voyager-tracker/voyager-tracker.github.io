@@ -9,15 +9,19 @@
     "summary_es": "Cada Voyager lleva un disco fonográfico de cobre chapado en oro de 30 cm que contiene sonidos e imágenes destinados a mostrar la diversidad de la vida y la cultura en la Tierra a cualquier forma de vida extraterrestre inteligente, o a humanos de un futuro lejano, que pudiera encontrarlo.",
     "summary_ja": "両ボイジャーは、地球上の生命と文化の多様性を、これを発見するかもしれない知的地球外生命体や遠い未来の人類に伝えるための音と画像を収めた、直径12インチの金メッキ銅製レコードを搭載している。",
     "contents": [
-      { "en": "116 encoded images of Earth, life, and science", "zh": "116張以類比方式編碼的地球、生命與科學影像", "es": "116 imágenes codificadas de la Tierra, la vida y la ciencia", "ja": "地球・生命・科学に関する116枚の符号化画像" },
-      { "en": "Natural sounds (surf, wind, thunder, animals)", "zh": "自然聲音（海浪、風聲、雷聲、動物叫聲）", "es": "Sonidos naturales (olas, viento, truenos, animales)", "ja": "自然の音（波、風、雷、動物の鳴き声）" },
-      { "en": "Spoken greetings in 55 languages", "zh": "55種語言錄製的問候語", "es": "Saludos hablados en 55 idiomas", "ja": "55の言語による挨拶の音声" },
-      { "en": "Musical selections from different cultures and eras", "zh": "來自不同文化與時代的音樂選輯", "es": "Selecciones musicales de diferentes culturas y épocas", "ja": "さまざまな文化・時代の音楽集" },
-      { "en": "A printed message from U.S. President Jimmy Carter and UN Secretary-General Kurt Waldheim", "zh": "美國總統卡特與聯合國秘書長瓦德翰的書面訊息", "es": "Un mensaje impreso del presidente de EE. UU. Jimmy Carter y el secretario general de la ONU Kurt Waldheim", "ja": "カーター米大統領と国連事務総長ワルトハイムによる印刷メッセージ" },
-      { "en": "Playback instructions engraved on the cover in symbolic diagrams", "zh": "唱片封套以符號圖示刻有播放說明", "es": "Instrucciones de reproducción grabadas en la portada mediante diagramas simbólicos", "ja": "カバーに刻まれた図記号による再生方法の説明" }
+      { "en": "116 encoded images of Earth, life, and science", "zh": "116張以類比方式編碼的地球、生命與科學影像", "es": "116 imágenes codificadas de la Tierra, la vida y la ciencia", "ja": "地球・生命・科学に関する116枚の符号化画像", "en_kid": "116 pictures of Earth, animals, and science stuff", "zh_kid": "116張地球、動物跟科學的照片", "es_kid": "116 fotos de la Tierra, animales y cosas de ciencia", "ja_kid": "地球や動物、科学に関する116枚の写真" },
+      { "en": "Natural sounds (surf, wind, thunder, animals)", "zh": "自然聲音（海浪、風聲、雷聲、動物叫聲）", "es": "Sonidos naturales (olas, viento, truenos, animales)", "ja": "自然の音（波、風、雷、動物の鳴き声）", "en_kid": "Real sounds from nature — ocean waves, wind, thunder, and animal noises!", "zh_kid": "大自然真實的聲音——海浪聲、風聲、雷聲，還有動物的叫聲！", "es_kid": "¡Sonidos reales de la naturaleza — olas del mar, viento, truenos y animales!", "ja_kid": "本物の自然の音——波の音、風の音、雷、それに動物の鳴き声！" },
+      { "en": "Spoken greetings in 55 languages", "zh": "55種語言錄製的問候語", "es": "Saludos hablados en 55 idiomas", "ja": "55の言語による挨拶の音声", "en_kid": "People saying \"hello!\" in 55 different languages", "zh_kid": "用55種不同語言說「你好」", "es_kid": "Personas diciendo «¡hola!» en 55 idiomas diferentes", "ja_kid": "55の言語で「こんにちは」って言う声" },
+      { "en": "Musical selections from different cultures and eras", "zh": "來自不同文化與時代的音樂選輯", "es": "Selecciones musicales de diferentes culturas y épocas", "ja": "さまざまな文化・時代の音楽集", "en_kid": "Music from all over the world, from many different times", "zh_kid": "來自世界各地、不同時代的音樂", "es_kid": "Música de todo el mundo, de muchas épocas distintas", "ja_kid": "世界中の、いろんな時代の音楽" },
+      { "en": "A printed message from U.S. President Jimmy Carter and UN Secretary-General Kurt Waldheim", "zh": "美國總統卡特與聯合國秘書長瓦德翰的書面訊息", "es": "Un mensaje impreso del presidente de EE. UU. Jimmy Carter y el secretario general de la ONU Kurt Waldheim", "ja": "カーター米大統領と国連事務総長ワルトハイムによる印刷メッセージ", "en_kid": "A written note from the US President and the leader of the United Nations", "zh_kid": "美國總統跟聯合國秘書長寫的一封信", "es_kid": "Una carta escrita por el presidente de EE. UU. y el líder de la ONU", "ja_kid": "アメリカ大統領と国連のリーダーが書いた手紙" },
+      { "en": "Playback instructions engraved on the cover in symbolic diagrams", "zh": "唱片封套以符號圖示刻有播放說明", "es": "Instrucciones de reproducción grabadas en la portada mediante diagramas simbólicos", "ja": "カバーに刻まれた図記号による再生方法の説明", "en_kid": "Pictures on the cover showing how to play it (in case aliens don't have a manual!)", "zh_kid": "封面上畫了圖，教怎麼播放它（畢竟外星人也沒有說明書可以看！）", "es_kid": "Dibujos en la portada que explican cómo reproducirlo (¡por si los extraterrestres no tienen manual!)", "ja_kid": "カバーに描かれた、再生方法を教えてくれる絵（宇宙人も説明書なしでわかるように！）" }
     ],
     "source": "NASA Science — Voyager Mission",
-    "sourceUrl": "https://science.nasa.gov/mission/voyager/"
+    "sourceUrl": "https://science.nasa.gov/mission/voyager/",
+    "summary_en_kid": "Each Voyager carries a special golden record — like a giant metal CD! It has sounds and pictures from Earth, just in case an alien (or a future human) ever finds it and wants to know what life on our planet is like.",
+    "summary_zh_kid": "每艘航海家號都帶著一片特別的金色唱片——就像一片超大的金屬CD！裡面有地球的聲音跟照片，如果哪天外星人（或未來的人類）找到它，就能知道我們星球上的生命是什麼樣子。",
+    "summary_es_kid": "¡Cada Voyager lleva un disco dorado especial, como un CD gigante de metal! Tiene sonidos e imágenes de la Tierra, por si algún día un extraterrestre (¡o un humano del futuro!) lo encuentra y quiere saber cómo es la vida en nuestro planeta.",
+    "summary_ja_kid": "航海家号はどちらも、特別な金色のレコードを積んでいるよ——巨大な金属製CDみたいなもの！地球の音や写真が入っていて、もし宇宙人（か、未来の人間）がそれを見つけたら、この星の生き物がどんなふうか分かるようになっているんだ。"
   },
   "paleBlueDot": {
     "title_en": "Pale Blue Dot",
@@ -36,7 +40,15 @@
     "credit": "NASA/JPL-Caltech",
     "image": "PIA00452",
     "source": "NASA Science — Voyager Mission",
-    "sourceUrl": "https://science.nasa.gov/mission/voyager/"
+    "sourceUrl": "https://science.nasa.gov/mission/voyager/",
+    "summary_en_kid": "On February 14, 1990, scientist Carl Sagan asked Voyager 1 to turn around and take one last picture — of home. From about 6 billion kilometers away, Earth showed up as just a tiny speck of light, smaller than a single pixel. People now call it the \"Pale Blue Dot.\"",
+    "summary_zh_kid": "1990年2月14日，科學家卡爾．薩根請航海家1號轉過頭來，回望一次自己的家——地球。從大約60億公里外看，地球只是一個小小的光點，比一個像素還小。後來大家都叫它「淡藍色小點」。",
+    "summary_es_kid": "El 14 de febrero de 1990, el científico Carl Sagan le pidió a Voyager 1 que se diera la vuelta y tomara una última foto de su hogar. Desde unos 6.000 millones de kilómetros de distancia, la Tierra apareció como un puntito de luz, más pequeño que un solo píxel. Ahora todos lo llaman el «Pálido Punto Azul».",
+    "summary_ja_kid": "1990年2月14日、科学者カール・セーガンはボイジャー1号にお願いして、ふるさとの地球をもう一度だけ撮影してもらった。約60億キロメートル先から見ると、地球はたった1画素にも満たない小さな光の点だった。今ではみんなそれを「ペイル・ブルー・ドット」と呼んでいるよ。",
+    "quote_en_kid": "That tiny dot? That's every person who has ever lived.",
+    "quote_zh_kid": "那個小小的光點？那裡面裝著曾經活過的每一個人。",
+    "quote_es_kid": "¿Ese puntito? Ahí está cada persona que ha vivido jamás.",
+    "quote_ja_kid": "あの小さな点？そこには、これまで生きてきたすべての人がいるんだよ。"
   },
   "deepSpaceNetwork": {
     "title_en": "Deep Space Network (DSN)",
@@ -57,6 +69,19 @@
   },
   "missionUpdates": [
     {
+      "date": "2026-02-01",
+      "title_en": "Voyager 2's Cosmic Ray Subsystem (CRS) deactivated",
+      "title_zh": "航海家2號的宇宙射線子系統（CRS）關閉",
+      "title_es": "Se desactivó el Subsistema de Rayos Cósmicos (CRS) de Voyager 2",
+      "title_ja": "ボイジャー2号の宇宙線検出装置（CRS）が停止",
+      "summary_en": "Following the same power-conservation plan already applied to Voyager 1, the mission team deactivated Voyager 2's Cosmic Ray Subsystem in early 2026 to extend the spacecraft's remaining operational life.",
+      "summary_zh": "延續已套用於航海家1號的節能計畫，任務團隊於2026年初關閉了航海家2號的宇宙射線子系統，以延長太空船剩餘的可運作時間。",
+      "summary_es": "Siguiendo el mismo plan de conservación de energía ya aplicado a Voyager 1, el equipo de la misión desactivó el Subsistema de Rayos Cósmicos de Voyager 2 a principios de 2026 para prolongar la vida operativa restante de la sonda.",
+      "summary_ja": "ボイジャー1号にすでに適用されている節電計画に続き、ミッションチームは探査機の残り運用期間を延ばすため、2026年初めにボイジャー2号の宇宙線検出装置を停止した。",
+      "source": "NASA Science — Voyager Instruments",
+      "sourceUrl": "https://science.nasa.gov/mission/voyager/instruments/"
+    },
+    {
       "date": "2025-02-01",
       "title_en": "Voyager 1's Cosmic Ray Subsystem (CRS) deactivated",
       "title_zh": "航海家1號的宇宙射線子系統（CRS）關閉",
@@ -68,6 +93,32 @@
       "summary_ja": "老朽化したRTGの電力を節約する継続的な計画の一環として、ミッションチームは2025年2月にボイジャー1号の宇宙線検出装置を停止した。",
       "source": "NASA Science — Voyager Instruments",
       "sourceUrl": "https://science.nasa.gov/mission/voyager/instruments/"
+    },
+    {
+      "date": "2024-04-01",
+      "title_en": "Voyager 1 sends readable science data again after a computer fault",
+      "title_zh": "航海家1號電腦故障修復後恢復傳回可讀取的科學資料",
+      "title_es": "Voyager 1 vuelve a enviar datos científicos legibles tras una avería informática",
+      "title_ja": "コンピューター障害から復旧し、ボイジャー1号が再び読み取り可能な科学データを送信",
+      "summary_en": "Starting in November 2023, Voyager 1 began transmitting unreadable, garbled data due to a fault in one of its onboard computers. In April 2024, the mission team traced the problem to a small amount of corrupted computer memory and fixed it by relocating the affected code elsewhere in memory — restoring usable science data.",
+      "summary_zh": "自2023年11月起，航海家1號因機上電腦故障，開始傳回無法讀取的亂碼資料。任務團隊於2024年4月找出問題出在一小段損毀的電腦記憶體，並將受影響的程式碼搬移到記憶體其他區塊修復，成功恢復可用的科學資料。",
+      "summary_es": "A partir de noviembre de 2023, Voyager 1 comenzó a transmitir datos ilegibles debido a una avería en uno de sus computadores de a bordo. En abril de 2024, el equipo de la misión localizó el problema en una pequeña porción de memoria dañada y lo solucionó reubicando el código afectado en otra parte de la memoria, restableciendo así datos científicos utilizables.",
+      "summary_ja": "2023年11月から、ボイジャー1号は搭載コンピューターの故障により判読不能なデータを送信するようになった。2024年4月、ミッションチームは破損した少量のメモリが原因であることを特定し、影響を受けたコードをメモリの別の領域へ移すことで修復し、利用可能な科学データの送信を回復させた。",
+      "source": "NASA Science — Voyager Mission",
+      "sourceUrl": "https://science.nasa.gov/mission/voyager/"
+    },
+    {
+      "date": "2023-08-01",
+      "title_en": "Voyager 2 loses contact after a commanding error, restored via an \"interstellar shout\"",
+      "title_zh": "航海家2號因指令錯誤失去聯繫，透過「星際吶喊」重新恢復通訊",
+      "title_es": "Voyager 2 pierde contacto tras un error de comando, restablecido mediante un «grito interestelar»",
+      "title_ja": "コマンド送信の誤りでボイジャー2号と交信が途絶、「インターステラー・シャウト」で復旧",
+      "summary_en": "In July 2023, a routine command accidentally tilted Voyager 2's antenna slightly away from Earth, cutting off communication. In early August 2023, the Deep Space Network sent an unusually powerful, precisely aimed transmission — informally nicknamed an \"interstellar shout\" — that successfully reoriented the antenna and restored contact.",
+      "summary_zh": "2023年7月，一次例行指令意外讓航海家2號的天線稍微偏離地球方向，導致通訊中斷。2023年8月初，深空網路發出一道異常強力且精準瞄準的訊號，非正式地被稱為「星際吶喊」，成功讓天線重新對準地球，恢復了通訊。",
+      "summary_es": "En julio de 2023, un comando de rutina inclinó accidentalmente la antena de Voyager 2 ligeramente lejos de la Tierra, cortando la comunicación. A principios de agosto de 2023, la Red del Espacio Profundo envió una transmisión inusualmente potente y precisamente dirigida — apodada informalmente un «grito interestelar» — que logró reorientar la antena y restableció el contacto.",
+      "summary_ja": "2023年7月、通常のコマンド送信によりボイジャー2号のアンテナが地球からわずかにずれてしまい、通信が途絶した。2023年8月初め、深宇宙探査網は非公式に「インターステラー・シャウト」と呼ばれる、通常より強力かつ精密に照準を合わせた電波を送信し、アンテナの向きを立て直して交信を回復させた。",
+      "source": "NASA Science — Voyager Mission",
+      "sourceUrl": "https://science.nasa.gov/mission/voyager/"
     },
     {
       "date": "2018-12-10",

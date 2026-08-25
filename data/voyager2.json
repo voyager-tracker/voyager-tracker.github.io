@@ -38,7 +38,11 @@
     "note_en": "About 48° south of the ecliptic plane, toward the constellations Sagittarius and Pavo.",
     "note_zh": "位於黃道面以南約 48 度，朝人馬座與孔雀座方向前進。",
     "note_es": "Unos 48° al sur del plano de la eclíptica, hacia las constelaciones de Sagitario y Pavo.",
-    "note_ja": "黄道面から南へ約48度、いて座とくじゃく座の方向へ進んでいる。"
+    "note_ja": "黄道面から南へ約48度、いて座とくじゃく座の方向へ進んでいる。",
+    "note_en_kid": "Flying below where the planets orbit, heading toward the constellations Sagittarius and Pavo",
+    "note_zh_kid": "飛在行星繞行的平面下方，朝人馬座跟孔雀座的方向前進",
+    "note_es_kid": "Volando por debajo de donde orbitan los planetas, hacia las constelaciones de Sagitario y Pavo",
+    "note_ja_kid": "惑星が回っている面より下を飛んで、いて座とくじゃく座の方向に向かっているよ"
   },
   "escapeRateAUyr": 3.174,
   "speedKmS": 15.3,
@@ -60,16 +64,20 @@
     "en": "Extended Mission — Interstellar Space",
     "zh": "延伸任務中 — 位於星際空間",
     "es": "Misión extendida — Espacio interestelar",
-    "ja": "延長ミッション中 — 星間空間"
+    "ja": "延長ミッション中 — 星間空間",
+    "en_kid": "On a Bonus Adventure — Way Out in Interstellar Space!",
+    "zh_kid": "正在執行獎勵任務——已經飛到星際空間裡了！",
+    "es_kid": "¡En una misión de bono — muy lejos, en el espacio interestelar!",
+    "ja_kid": "おまけの大ぼうけん中——もう星間空間まで来ているよ！"
   },
   "instruments": {
     "totalExperiments": 11,
     "active": [
       { "code": "MAG", "name_en": "Magnetometer", "name_zh": "磁強計", "name_es": "Magnetómetro", "name_ja": "磁力計" },
-      { "code": "PWS", "name_en": "Plasma Wave Subsystem", "name_zh": "電漿波譜儀", "name_es": "Subsistema de Ondas de Plasma", "name_ja": "プラズマ波動観測装置" },
-      { "code": "CRS", "name_en": "Cosmic Ray Subsystem", "name_zh": "宇宙射線子系統", "name_es": "Subsistema de Rayos Cósmicos", "name_ja": "宇宙線検出装置", "note_en": "Planned deactivation in 2026", "note_zh": "計畫於 2026 年關閉", "note_es": "Desactivación prevista en 2026", "note_ja": "2026年に停止予定" }
+      { "code": "PWS", "name_en": "Plasma Wave Subsystem", "name_zh": "電漿波譜儀", "name_es": "Subsistema de Ondas de Plasma", "name_ja": "プラズマ波動観測装置" }
     ],
     "inactive": [
+      { "code": "CRS", "name_en": "Cosmic Ray Subsystem", "name_zh": "宇宙射線子系統", "name_es": "Subsistema de Rayos Cósmicos", "name_ja": "宇宙線検出装置", "note_en": "Deactivated February 2026", "note_zh": "已於 2026 年 2 月關閉", "note_es": "Desactivado en febrero de 2026", "note_ja": "2026年2月に停止" },
       { "code": "LECP", "name_en": "Low-Energy Charged Particle Instrument", "name_zh": "低能帶電粒子儀", "name_es": "Instrumento de Partículas Cargadas de Baja Energía", "name_ja": "低エネルギー荷電粒子検出装置" },
       { "code": "PLS", "name_en": "Plasma Science", "name_zh": "電漿科學儀", "name_es": "Ciencia del Plasma", "name_ja": "プラズマ観測装置" },
       { "code": "ISS", "name_en": "Imaging Science Subsystem", "name_zh": "成像科學子系統", "name_es": "Subsistema de Imágenes Científicas", "name_ja": "撮像科学観測装置" },

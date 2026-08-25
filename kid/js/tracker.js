@@ -69,8 +69,8 @@ function renderTrackerCards() {
         <div class="stat"><dt>${t('tracker.distanceEarth')}</dt><dd class="js-distance">${formatBillionKm(est.km, lang)} <span class="stat-sub">(${formatAU(est.au)})</span></dd></div>
         <div class="stat"><dt>${t('tracker.speed')}</dt><dd>${v.speedKmS} ${t('unit.kmS')}</dd></div>
         <div class="stat"><dt>${t('tracker.signalDelay')}</dt><dd class="js-signal">${formatHours(est.delayOneWay, lang)}</dd></div>
-        <div class="stat"><dt>${t('tracker.direction')}</dt><dd>${v.direction['note_' + lang]}</dd></div>
-        <div class="stat"><dt>${t('tracker.status')}</dt><dd class="status-pill">${v.status[lang]}</dd></div>
+        <div class="stat"><dt>${t('tracker.direction')}</dt><dd>${v.direction['note_' + lang + '_kid'] || v.direction['note_' + lang]}</dd></div>
+        <div class="stat"><dt>${t('tracker.status')}</dt><dd class="status-pill">${v.status[lang + '_kid'] || v.status[lang]}</dd></div>
       </dl>
       <div class="tracker-card__badges"></div>
       <p class="tracker-card__baseline">${t('tracker.baselineNote')}: ${v.baseline.date} · ${formatAU(v.baseline.distanceFromEarthAU)}</p>

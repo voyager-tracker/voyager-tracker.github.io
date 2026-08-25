@@ -37,7 +37,11 @@
     "note_en": "About 35° north of the ecliptic plane, in the general direction of the solar apex.",
     "note_zh": "位於黃道面以北約 35 度，大致朝太陽向點方向前進。",
     "note_es": "Unos 35° al norte del plano de la eclíptica, en dirección general al ápex solar.",
-    "note_ja": "黄道面から北へ約35度、太陽向点のおおよその方向へ進んでいる。"
+    "note_ja": "黄道面から北へ約35度、太陽向点のおおよその方向へ進んでいる。",
+    "note_en_kid": "Flying above where the planets orbit, heading toward a point in the sky called the solar apex",
+    "note_zh_kid": "飛在行星繞行的平面上方，朝著天空中一個叫做「太陽向點」的方向前進",
+    "note_es_kid": "Volando por encima de donde orbitan los planetas, hacia un punto del cielo llamado el ápex solar",
+    "note_ja_kid": "惑星が回っている面より上を飛んで、「太陽向点」という空の一点に向かっているよ"
   },
   "escapeRateAUyr": 3.561,
   "speedKmS": 16.9,
@@ -59,7 +63,11 @@
     "en": "Extended Mission — Interstellar Space",
     "zh": "延伸任務中 — 位於星際空間",
     "es": "Misión extendida — Espacio interestelar",
-    "ja": "延長ミッション中 — 星間空間"
+    "ja": "延長ミッション中 — 星間空間",
+    "en_kid": "On a Bonus Adventure — Way Out in Interstellar Space!",
+    "zh_kid": "正在執行獎勵任務——已經飛到星際空間裡了！",
+    "es_kid": "¡En una misión de bono — muy lejos, en el espacio interestelar!",
+    "ja_kid": "おまけの大ぼうけん中——もう星間空間まで来ているよ！"
   },
   "instruments": {
     "totalExperiments": 11,

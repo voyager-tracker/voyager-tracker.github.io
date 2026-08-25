@@ -1,6 +1,14 @@
 /**
- * content.js — Golden Record, Pale Blue Dot, and Data Sources sections.
+ * content.js (Kids Edition) — Golden Record, Pale Blue Dot, and Data
+ * Sources sections. Prefers the "_kid" suffixed fields in data/mission.json
+ * (simplified, playful rewrites) when present, falling back to the same
+ * field the main site uses so nothing breaks for content that hasn't
+ * gotten a kid-friendly rewrite yet.
  */
+function kidField(obj, lang, base) {
+  return obj[base + '_' + lang + '_kid'] || obj[base + '_' + lang];
+}
+
 function renderGoldenRecordAndPBD() {
   const lang = getLang();
   const mission = VOYAGER_DATA.mission;
@@ -10,9 +18,9 @@ function renderGoldenRecordAndPBD() {
   if (grContainer && mission.goldenRecord) {
     const gr = mission.goldenRecord;
     grContainer.innerHTML = `
-      <p class="lead">${gr['summary_' + lang]}</p>
+      <p class="lead">${kidField(gr, lang, 'summary')}</p>
       <ul class="content-list">
-        ${(gr.contents || []).map((c) => `<li>${c[lang]}</li>`).join('')}
+        ${(gr.contents || []).map((c) => `<li>${c[lang + '_kid'] || c[lang]}</li>`).join('')}
       </ul>
       <a class="text-link" href="${gr.sourceUrl}" target="_blank" rel="noopener noreferrer">${gr.source} ↗</a>
     `;
@@ -28,8 +36,8 @@ function renderGoldenRecordAndPBD() {
         <figcaption>${t('gallery.credit')}: ${pbd.credit}</figcaption>
       </figure>
       <div class="pbd-text">
-        <p class="pbd-quote">${pbd['quote_' + lang]}</p>
-        <p>${pbd['summary_' + lang]}</p>
+        <p class="pbd-quote">${kidField(pbd, lang, 'quote')}</p>
+        <p>${kidField(pbd, lang, 'summary')}</p>
         <a class="text-link" href="${pbd.sourceUrl}" target="_blank" rel="noopener noreferrer">${pbd.source} ↗</a>
       </div>
     `;

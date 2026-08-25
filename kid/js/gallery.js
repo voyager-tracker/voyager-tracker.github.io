@@ -45,17 +45,21 @@ function renderGalleryGrid() {
   if (!grid || !VOYAGER_DATA.gallery) return;
   const lang = getLang();
   const items = VOYAGER_DATA.gallery.filter((g) => galleryActiveFilter === 'all' || g.categories.includes(galleryActiveFilter));
-  grid.innerHTML = items.map((g) => `
+  // Prefer each photo's kid-friendly caption (title_<lang>_kid) when present.
+  grid.innerHTML = items.map((g) => {
+    const title = g['title_' + lang + '_kid'] || g['title_' + lang];
+    return `
     <figure class="gallery-item">
-      <img src="${nasaImageUrl(g.id, 'thumb')}" alt="${g['title_' + lang]}" loading="lazy"
+      <img src="${nasaImageUrl(g.id, 'thumb')}" alt="${title}" loading="lazy"
            onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'gallery-fallback',textContent:'${t('gallery.imgUnavailable')}'}));">
       <figcaption>
-        <span class="gallery-title">${g['title_' + lang]}</span>
+        <span class="gallery-title">${title}</span>
         <span class="gallery-credit">${t('gallery.credit')}: ${g.credit}</span>
         <a href="${nasaImageUrl(g.id, 'orig')}" target="_blank" rel="noopener noreferrer">${t('gallery.viewFull')} ↗</a>
       </figcaption>
     </figure>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function renderGallery() {

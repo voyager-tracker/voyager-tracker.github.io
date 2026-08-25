@@ -1,16 +1,226 @@
 [
-  { "id": "PIA17464", "title_en": "Voyager 1 Launch, 1977", "title_zh": "航海家1號發射，1977年", "title_es": "Lanzamiento de Voyager 1, 1977", "title_ja": "ボイジャー1号の打ち上げ（1977年）", "categories": ["voyager1", "launch"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA21740", "title_en": "Voyager 1's Launch Vehicle", "title_zh": "航海家1號的發射載具", "title_es": "El vehículo de lanzamiento de Voyager 1", "title_ja": "ボイジャー1号の打ち上げロケット", "categories": ["voyager1", "launch"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA21743", "title_en": "Voyager 2 Encapsulation", "title_zh": "航海家2號進行整流罩封裝", "title_es": "Encapsulado de Voyager 2", "title_ja": "ボイジャー2号のフェアリング格納作業", "categories": ["voyager2", "launch"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA14111", "title_en": "Model of Voyager (Artist Concept)", "title_zh": "航海家號模型（藝術概念圖）", "title_es": "Modelo de la Voyager (concepto artístico)", "title_ja": "ボイジャーの模型（イメージ図）", "categories": ["spacecraft"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA26353", "title_en": "Voyager Speeds Through Space (Artist Concept)", "title_zh": "航海家號在太空中飛行（藝術概念圖）", "title_es": "La Voyager viaja por el espacio (concepto artístico)", "title_ja": "宇宙を進むボイジャー（イメージ図）", "categories": ["spacecraft", "interstellar"], "credit": "NASA Visualization Technology Applications and Development (VTAD)" },
-  { "id": "ARC-1986-AC86-7042", "title_en": "Uranus, Imaged by Voyager 2 (1986)", "title_zh": "航海家2號拍攝的天王星（1986年）", "title_es": "Urano, fotografiado por Voyager 2 (1986)", "title_ja": "ボイジャー2号が撮影した天王星（1986年）", "categories": ["voyager2", "uranus"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA00453", "title_en": "Solar System Portrait — Jupiter, Saturn, Uranus, Neptune", "title_zh": "太陽系全家福 — 木星、土星、天王星、海王星", "title_es": "Retrato del sistema solar — Júpiter, Saturno, Urano, Neptuno", "title_ja": "太陽系の肖像 — 木星・土星・天王星・海王星", "categories": ["jupiter", "saturn", "uranus", "neptune"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA00451", "title_en": "Solar System Portrait — 60-Frame Mosaic", "title_zh": "太陽系全家福 — 60幅影像拼接", "title_es": "Retrato del sistema solar — mosaico de 60 imágenes", "title_ja": "太陽系の肖像 — 60コマのモザイク", "categories": ["jupiter", "saturn", "uranus", "neptune", "voyager1"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA00452", "title_en": "Pale Blue Dot (1990)", "title_zh": "淡藍色小點（1990年）", "title_es": "Pálido Punto Azul (1990)", "title_ja": "ペイル・ブルー・ドット（1990年）", "categories": ["pale-blue-dot", "voyager1"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA23645", "title_en": "Pale Blue Dot Revisited", "title_zh": "重新處理的淡藍色小點影像", "title_es": "Pálido Punto Azul revisitado", "title_ja": "再処理されたペイル・ブルー・ドット", "categories": ["pale-blue-dot"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA23681", "title_en": "Voyager 1's Perspective for the Family Portrait", "title_zh": "航海家1號拍攝全家福時的視角", "title_es": "Perspectiva de Voyager 1 para el retrato familiar", "title_ja": "「家族写真」撮影時のボイジャー1号からの視点", "categories": ["pale-blue-dot", "voyager1"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA21741", "title_en": "Preparing the Golden Record", "title_zh": "金唱片製作過程", "title_es": "Preparando el Disco de Oro", "title_ja": "ゴールデンレコードの制作", "categories": ["golden-record"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA14113", "title_en": "Voyager Special Cargo: The Golden Record", "title_zh": "航海家號的特殊貨物：金唱片", "title_es": "Carga especial de la Voyager: el Disco de Oro", "title_ja": "ボイジャーの特別な積み荷：ゴールデンレコード", "categories": ["golden-record"], "credit": "NASA/JPL-Caltech" },
-  { "id": "PIA17035", "title_en": "Mementos of Earth", "title_zh": "地球的紀念物", "title_es": "Recuerdos de la Tierra", "title_ja": "地球の記念品", "categories": ["golden-record"], "credit": "NASA/JPL-Caltech" }
+  {
+    "id": "PIA17464",
+    "title_en": "Voyager 1 Launch, 1977",
+    "title_zh": "航海家1號發射，1977年",
+    "title_es": "Lanzamiento de Voyager 1, 1977",
+    "title_ja": "ボイジャー1号の打ち上げ（1977年）",
+    "categories": [
+      "voyager1",
+      "launch"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Blast Off! Voyager 1 Launches (1977)",
+    "title_zh_kid": "咻！航海家1號發射啦！（1977年）",
+    "title_es_kid": "¡Despegue! Voyager 1 se lanza (1977)",
+    "title_ja_kid": "発射！ボイジャー1号、いくよ！（1977年）"
+  },
+  {
+    "id": "PIA21740",
+    "title_en": "Voyager 1's Launch Vehicle",
+    "title_zh": "航海家1號的發射載具",
+    "title_es": "El vehículo de lanzamiento de Voyager 1",
+    "title_ja": "ボイジャー1号の打ち上げロケット",
+    "categories": [
+      "voyager1",
+      "launch"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "The Giant Rocket That Carried Voyager 1",
+    "title_zh_kid": "載著航海家1號的巨大火箭",
+    "title_es_kid": "El cohete gigante que llevó a Voyager 1",
+    "title_ja_kid": "ボイジャー1号を運んだ大きなロケット"
+  },
+  {
+    "id": "PIA21743",
+    "title_en": "Voyager 2 Encapsulation",
+    "title_zh": "航海家2號進行整流罩封裝",
+    "title_es": "Encapsulado de Voyager 2",
+    "title_ja": "ボイジャー2号のフェアリング格納作業",
+    "categories": [
+      "voyager2",
+      "launch"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Tucking Voyager 2 Safely Inside Its Rocket",
+    "title_zh_kid": "小心把航海家2號裝進火箭裡",
+    "title_es_kid": "Guardando a Voyager 2 con cuidado dentro de su cohete",
+    "title_ja_kid": "ボイジャー2号をそっとロケットに収めているところ"
+  },
+  {
+    "id": "PIA14111",
+    "title_en": "Model of Voyager (Artist Concept)",
+    "title_zh": "航海家號模型（藝術概念圖）",
+    "title_es": "Modelo de la Voyager (concepto artístico)",
+    "title_ja": "ボイジャーの模型（イメージ図）",
+    "categories": [
+      "spacecraft"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "What a Voyager Spaceship Looks Like",
+    "title_zh_kid": "航海家太空船長什麼樣子",
+    "title_es_kid": "Así se ve una nave Voyager",
+    "title_ja_kid": "ボイジャー探査機ってこんな見た目"
+  },
+  {
+    "id": "PIA26353",
+    "title_en": "Voyager Speeds Through Space (Artist Concept)",
+    "title_zh": "航海家號在太空中飛行（藝術概念圖）",
+    "title_es": "La Voyager viaja por el espacio (concepto artístico)",
+    "title_ja": "宇宙を進むボイジャー（イメージ図）",
+    "categories": [
+      "spacecraft",
+      "interstellar"
+    ],
+    "credit": "NASA Visualization Technology Applications and Development (VTAD)",
+    "title_en_kid": "Zooming Through Space!",
+    "title_zh_kid": "在太空中呼嘯飛行！",
+    "title_es_kid": "¡Volando rapidísimo por el espacio!",
+    "title_ja_kid": "宇宙をびゅーんと飛んでいくよ！"
+  },
+  {
+    "id": "ARC-1986-AC86-7042",
+    "title_en": "Uranus, Imaged by Voyager 2 (1986)",
+    "title_zh": "航海家2號拍攝的天王星（1986年）",
+    "title_es": "Urano, fotografiado por Voyager 2 (1986)",
+    "title_ja": "ボイジャー2号が撮影した天王星（1986年）",
+    "categories": [
+      "voyager2",
+      "uranus"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Voyager 2's Photo of Uranus (1986)",
+    "title_zh_kid": "航海家2號拍下的天王星照片（1986年）",
+    "title_es_kid": "La foto de Urano que tomó Voyager 2 (1986)",
+    "title_ja_kid": "ボイジャー2号が撮った天王星の写真（1986年）"
+  },
+  {
+    "id": "PIA00453",
+    "title_en": "Solar System Portrait — Jupiter, Saturn, Uranus, Neptune",
+    "title_zh": "太陽系全家福 — 木星、土星、天王星、海王星",
+    "title_es": "Retrato del sistema solar — Júpiter, Saturno, Urano, Neptuno",
+    "title_ja": "太陽系の肖像 — 木星・土星・天王星・海王星",
+    "categories": [
+      "jupiter",
+      "saturn",
+      "uranus",
+      "neptune"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "A Group Photo of Four Big Planets!",
+    "title_zh_kid": "四顆大行星的合照！",
+    "title_es_kid": "¡Una foto grupal de cuatro planetas gigantes!",
+    "title_ja_kid": "4つの大きな惑星の集合写真！"
+  },
+  {
+    "id": "PIA00451",
+    "title_en": "Solar System Portrait — 60-Frame Mosaic",
+    "title_zh": "太陽系全家福 — 60幅影像拼接",
+    "title_es": "Retrato del sistema solar — mosaico de 60 imágenes",
+    "title_ja": "太陽系の肖像 — 60コマのモザイク",
+    "categories": [
+      "jupiter",
+      "saturn",
+      "uranus",
+      "neptune",
+      "voyager1"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "60 Photos Stitched Into One Big Picture",
+    "title_zh_kid": "60張照片拼成的一張大圖",
+    "title_es_kid": "60 fotos unidas en una sola imagen enorme",
+    "title_ja_kid": "60枚の写真をつなげた大きな1枚"
+  },
+  {
+    "id": "PIA00452",
+    "title_en": "Pale Blue Dot (1990)",
+    "title_zh": "淡藍色小點（1990年）",
+    "title_es": "Pálido Punto Azul (1990)",
+    "title_ja": "ペイル・ブルー・ドット（1990年）",
+    "categories": [
+      "pale-blue-dot",
+      "voyager1"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Earth Looks Like a Tiny Dot From Here!",
+    "title_zh_kid": "地球在這裡看起來像個小點點！",
+    "title_es_kid": "¡Desde aquí, la Tierra parece un puntito!",
+    "title_ja_kid": "ここから見ると地球は小さな点みたい！"
+  },
+  {
+    "id": "PIA23645",
+    "title_en": "Pale Blue Dot Revisited",
+    "title_zh": "重新處理的淡藍色小點影像",
+    "title_es": "Pálido Punto Azul revisitado",
+    "title_ja": "再処理されたペイル・ブルー・ドット",
+    "categories": [
+      "pale-blue-dot"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "The Tiny Dot Photo, Made Even Clearer",
+    "title_zh_kid": "那個小點點的照片，變得更清楚了",
+    "title_es_kid": "La foto del puntito, ahora más clara",
+    "title_ja_kid": "あの小さな点の写真が、もっとくっきりに"
+  },
+  {
+    "id": "PIA23681",
+    "title_en": "Voyager 1's Perspective for the Family Portrait",
+    "title_zh": "航海家1號拍攝全家福時的視角",
+    "title_es": "Perspectiva de Voyager 1 para el retrato familiar",
+    "title_ja": "「家族写真」撮影時のボイジャー1号からの視点",
+    "categories": [
+      "pale-blue-dot",
+      "voyager1"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Where Voyager 1 Was Standing for the Photo",
+    "title_zh_kid": "拍全家福時，航海家1號站在哪裡",
+    "title_es_kid": "Desde dónde Voyager 1 tomó la foto familiar",
+    "title_ja_kid": "家族写真を撮ったとき、ボイジャー1号はどこにいた？"
+  },
+  {
+    "id": "PIA21741",
+    "title_en": "Preparing the Golden Record",
+    "title_zh": "金唱片製作過程",
+    "title_es": "Preparando el Disco de Oro",
+    "title_ja": "ゴールデンレコードの制作",
+    "categories": [
+      "golden-record"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Making the Golden Record",
+    "title_zh_kid": "製作金唱片的過程",
+    "title_es_kid": "Haciendo el Disco de Oro",
+    "title_ja_kid": "ゴールデンレコードを作っているところ"
+  },
+  {
+    "id": "PIA14113",
+    "title_en": "Voyager Special Cargo: The Golden Record",
+    "title_zh": "航海家號的特殊貨物：金唱片",
+    "title_es": "Carga especial de la Voyager: el Disco de Oro",
+    "title_ja": "ボイジャーの特別な積み荷：ゴールデンレコード",
+    "categories": [
+      "golden-record"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "The Golden Record — Voyager's Coolest Cargo",
+    "title_zh_kid": "金唱片——航海家最酷的行李",
+    "title_es_kid": "El Disco de Oro — el equipaje más genial de la Voyager",
+    "title_ja_kid": "ゴールデンレコード——ボイジャーいちばんかっこいい持ち物"
+  },
+  {
+    "id": "PIA17035",
+    "title_en": "Mementos of Earth",
+    "title_zh": "地球的紀念物",
+    "title_es": "Recuerdos de la Tierra",
+    "title_ja": "地球の記念品",
+    "categories": [
+      "golden-record"
+    ],
+    "credit": "NASA/JPL-Caltech",
+    "title_en_kid": "Little Souvenirs From Planet Earth",
+    "title_zh_kid": "來自地球的小紀念品",
+    "title_es_kid": "Pequeños recuerdos del planeta Tierra",
+    "title_ja_kid": "地球からの小さな思い出の品"
+  }
 ]
