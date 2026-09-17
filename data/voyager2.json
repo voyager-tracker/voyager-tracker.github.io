@@ -48,17 +48,17 @@
   "speedKmS": 15.3,
   "speedKmH": 55000,
   "baseline": {
-    "date": "2026-09-16",
-    "distanceFromEarthKm": 21480712319,
-    "distanceFromEarthAU": 143.59,
-    "distanceFromSunAU": 143.955,
-    "signalDelayOneWayHours": 19.9,
+    "date": "2026-09-17",
+    "distanceFromEarthKm": 21483809306,
+    "distanceFromEarthAU": 143.61,
+    "distanceFromSunAU": 143.964,
+    "signalDelayOneWayHours": 19.91,
     "source": "NASA JPL Horizons API",
     "sourceUrl": "https://ssd.jpl.nasa.gov/horizons/",
-    "note_en": "Geometric state vector from JPL Horizons (no light-time correction), target -32, epoch 2026-09-16 00:00 TDB.",
-    "note_zh": "取自 NASA JPL Horizons 之幾何狀態向量（未做光行時間修正），目標代號 -32，時間點為 2026-09-16 00:00 TDB。",
-    "note_es": "Vector de estado geométrico de JPL Horizons (sin corrección por tiempo de luz), objetivo -32, época 2026-09-16 00:00 TDB.",
-    "note_ja": "JPL Horizonsによる幾何学的状態ベクトル（光行時間補正なし）、ターゲット -32、時刻 2026-09-16 00:00 TDB。"
+    "note_en": "Geometric state vector from JPL Horizons (no light-time correction), target -32, epoch 2026-09-17 00:00 TDB.",
+    "note_zh": "取自 NASA JPL Horizons 之幾何狀態向量（未做光行時間修正），目標代號 -32，時間點為 2026-09-17 00:00 TDB。",
+    "note_es": "Vector de estado geométrico de JPL Horizons (sin corrección por tiempo de luz), objetivo -32, época 2026-09-17 00:00 TDB.",
+    "note_ja": "JPL Horizonsによる幾何学的状態ベクトル（光行時間補正なし）、ターゲット -32、時刻 2026-09-17 00:00 TDB。"
   },
   "status": {
     "en": "Extended Mission — Interstellar Space",
