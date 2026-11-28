@@ -2,14 +2,19 @@
  * compare.js — Voyager 1 vs Voyager 2 comparison table, "who is
  * farther" visualization, and distance-between-the-two-spacecraft
  * calculation using a simplified 3D geometric model (astronomy.js).
- * Longitude values below are illustrative headings (not precise RA/Dec)
- * used only to visually separate the two divergent trajectories.
  */
-/* Illustrative ecliptic-longitude headings only (not precise RA/Dec),
-   chosen so the resulting angular separation (~90°) roughly matches
-   NASA's general description of the two divergent escape trajectories. */
 const V1_LONGITUDE_DEG = 60;
 const V2_LONGITUDE_DEG = 99;
+
+function compareField(obj, lang, prefix = '') {
+  const isKid = document.documentElement.hasAttribute('data-repo-root');
+  if (prefix) {
+    if (isKid && obj[prefix + '_' + lang + '_kid']) return obj[prefix + '_' + lang + '_kid'];
+    return obj[prefix + '_' + lang] || obj[prefix + '_en'] || '';
+  }
+  if (isKid && obj[lang + '_kid']) return obj[lang + '_kid'];
+  return obj[lang] || obj.en || '';
+}
 
 function renderCompare() {
   const body = document.getElementById('compare-table-body');
@@ -25,11 +30,24 @@ function renderCompare() {
     [t('compare.row.speed'), `${v1.speedKmS} ${t('unit.kmS')}`, `${v2.speedKmS} ${t('unit.kmS')}`],
     [t('compare.row.signalDelay'), formatHours(e1.delayOneWay, lang), formatHours(e2.delayOneWay, lang)],
     [t('compare.row.interstellar'), v1.interstellar.date, v2.interstellar.date],
-    [t('compare.row.status'), v1.status[lang], v2.status[lang]],
+    [t('compare.row.status'), compareField(v1.status, lang), compareField(v2.status, lang)],
     [t('compare.row.instruments'), activeCount(v1), activeCount(v2)],
-    [t('compare.row.direction'), v1.direction['note_' + lang], v2.direction['note_' + lang]]
+    [t('compare.row.direction'), compareField(v1.direction, lang, 'note'), compareField(v2.direction, lang, 'note')]
   ];
-  body.innerHTML = rows.map((r) => `<tr><th scope="row">${r[0]}</th><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+  const frag = document.createDocumentFragment();
+  rows.forEach(([label, c1, c2]) => {
+    const tr = document.createElement('tr');
+    const th = document.createElement('th');
+    th.scope = 'row';
+    th.textContent = label;
+    const td1 = document.createElement('td');
+    td1.textContent = c1;
+    const td2 = document.createElement('td');
+    td2.textContent = c2;
+    tr.append(th, td1, td2);
+    frag.appendChild(tr);
+  });
+  body.replaceChildren(frag);
 }
 
 function renderFartherViz() {
@@ -47,10 +65,10 @@ function renderFartherViz() {
     <div class="farther-track">
       <div class="farther-label farther-label--earth">${t('farther.earth')}</div>
       <div class="farther-bar farther-bar--near" style="width:${pctNear}%; --accent:${nearer.color}">
-        <span>${nearer.name[lang]}</span>
+        <span>${compareField(nearer.name, lang)}</span>
       </div>
       <div class="farther-bar farther-bar--far" style="width:${pctFar}%; --accent:${farther.color}">
-        <span>${farther.name[lang]}</span>
+        <span>${compareField(farther.name, lang)}</span>
       </div>
     </div>
     <p class="farther-line">${farther === VOYAGER_DATA.voyager1 ? t('farther.v1Line') : t('farther.v2Line')}</p>

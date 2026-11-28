@@ -1,7 +1,6 @@
 /**
- * timeline.js — dual-track mission timeline (Voyager 1 / Voyager 2),
- * built from the trajectory + interstellar fields in the NASA-sourced
- * data files. Positions are linearly scaled by year, 1977–2026.
+ * timeline.js — dual-track mission timeline (Voyager 1 / Voyager 2).
+ * Uses keyboard-accessible buttons and sequential h3 headings.
  */
 const TIMELINE_START_YEAR = 1977;
 const TIMELINE_END_YEAR = 2027;
@@ -14,22 +13,45 @@ function renderTimelineTrack(containerId, v) {
   const container = document.getElementById(containerId);
   if (!container) return;
   const lang = getLang();
-  const events = [...v.trajectory];
-  container.innerHTML = `
-    <h4 style="--accent:${v.color}">${v.name[lang]}</h4>
-    <div class="timeline-track" style="--accent:${v.color}">
-      <div class="timeline-line"></div>
-      ${events.map((e) => `
-        <div class="timeline-event" style="left:${timelinePercent(e.year)}%">
-          <span class="timeline-dot"></span>
-          <div class="timeline-tooltip">
-            <strong>${e.year}</strong>
-            <span>${e['label_' + lang]}</span>
-          </div>
-        </div>
-      `).join('')}
-    </div>
-  `;
+  const events = [...(v.trajectory || [])];
+
+  const heading = document.createElement('h3');
+  heading.style.setProperty('--accent', v.color);
+  heading.textContent = v.name[lang] || v.name.en;
+
+  const track = document.createElement('div');
+  track.className = 'timeline-track';
+  track.style.setProperty('--accent', v.color);
+
+  const line = document.createElement('div');
+  line.className = 'timeline-line';
+  line.setAttribute('aria-hidden', 'true');
+  track.appendChild(line);
+
+  events.forEach((e) => {
+    const label = e['label_' + lang] || e.label_en || '';
+    const item = document.createElement('div');
+    item.className = 'timeline-event';
+    item.style.left = `${timelinePercent(e.year)}%`;
+
+    const dotBtn = document.createElement('button');
+    dotBtn.type = 'button';
+    dotBtn.className = 'timeline-dot';
+    dotBtn.setAttribute('aria-label', `${e.year}: ${label}`);
+
+    const tip = document.createElement('div');
+    tip.className = 'timeline-tooltip';
+    const strong = document.createElement('strong');
+    strong.textContent = `${e.year} `;
+    const span = document.createElement('span');
+    span.textContent = label;
+    tip.append(strong, span);
+
+    item.append(dotBtn, tip);
+    track.appendChild(item);
+  });
+
+  container.replaceChildren(heading, track);
 }
 
 function renderTimeline() {

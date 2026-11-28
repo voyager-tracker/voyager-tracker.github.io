@@ -27,6 +27,9 @@
 <meta name="twitter:description" content="Una aventura espacial divertida para niños — sigue a Voyager 1 y Voyager 2 con datos sencillos y fotos geniales.">
 <meta name="twitter:image" content="https://images-assets.nasa.gov/image/PIA26353/PIA26353~orig.jpg">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/responsive.css">
 <link rel="stylesheet" href="../css/animations.css">
@@ -104,7 +107,7 @@
       <button class="lang-toggle-btn" data-lang="ja" type="button">日本語</button>
     </div>
     <a class="edition-toggle" href="../../es/">🔭 Versión Completa</a>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">☰</button>
   </div>
 </header>
 
@@ -248,8 +251,7 @@
     <h2 class="section-heading" data-i18n="science.heading">SCIENCE INSTRUMENTS</h2>
     <p class="section-sub" data-i18n="science.sub">The Voyager twins originally carried 11 science instruments each. Status below reflects the latest official NASA information — not assumed.</p>
     <figure class="spacecraft-figure">
-      <img src="https://images-assets.nasa.gov/image/PIA14111/PIA14111~thumb.jpg" alt="Model of the Voyager spacecraft (NASA/JPL-Caltech artist concept), showing the high-gain antenna, RTG boom, magnetometer boom, and science instrument platform" loading="lazy"
-           onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'gallery-fallback',textContent:'Image unavailable — view on NASA.gov'}));">
+      <img src="https://images-assets.nasa.gov/image/PIA14111/PIA14111~thumb.jpg" alt="Model of the Voyager spacecraft (NASA/JPL-Caltech artist concept), showing the high-gain antenna, RTG boom, magnetometer boom, and science instrument platform" width="520" height="390" loading="lazy" decoding="async" data-fallback-text="Image unavailable — view on NASA.gov">
       <figcaption>
         <span data-i18n="spacecraft.caption">Voyager spacecraft (NASA/JPL-Caltech artist concept)</span>
         · <a href="https://images-assets.nasa.gov/image/PIA14111/PIA14111~orig.jpg" target="_blank" rel="noopener noreferrer" data-i18n="gallery.viewFull">View full size on NASA.gov</a>
@@ -316,14 +318,14 @@
   <section class="section section--alt reveal">
     <h2 class="section-heading" data-i18n="methodology.heading">DATA & METHODOLOGY</h2>
     <div class="methodology-grid">
-      <div class="methodology-card"><h4 data-i18n="methodology.official.title">Official</h4><p data-i18n="methodology.official.body">—</p></div>
-      <div class="methodology-card"><h4 data-i18n="methodology.calculated.title">Calculated</h4><p data-i18n="methodology.calculated.body">—</p></div>
-      <div class="methodology-card"><h4 data-i18n="methodology.estimated.title">Estimated</h4><p data-i18n="methodology.estimated.body">—</p></div>
-      <div class="methodology-card"><h4 data-i18n="methodology.historical.title">Historical</h4><p data-i18n="methodology.historical.body">—</p></div>
+      <div class="methodology-card"><h3 data-i18n="methodology.official.title">Official</h3><p data-i18n="methodology.official.body">—</p></div>
+      <div class="methodology-card"><h3 data-i18n="methodology.calculated.title">Calculated</h3><p data-i18n="methodology.calculated.body">—</p></div>
+      <div class="methodology-card"><h3 data-i18n="methodology.estimated.title">Estimated</h3><p data-i18n="methodology.estimated.body">—</p></div>
+      <div class="methodology-card"><h3 data-i18n="methodology.historical.title">Historical</h3><p data-i18n="methodology.historical.body">—</p></div>
     </div>
     <p class="methodology-formula">estimatedDistance = baseDistance + (escapeRateAUyr × AU_KM) × elapsedYears</p>
     <div class="methodology-grid">
-      <div class="methodology-card"><h4 data-i18n="methodology.unavailable.title">When official data is unavailable</h4><p data-i18n="methodology.unavailable.body">—</p></div>
+      <div class="methodology-card"><h3 data-i18n="methodology.unavailable.title">When official data is unavailable</h3><p data-i18n="methodology.unavailable.body">—</p></div>
     </div>
   </section>
 
@@ -349,20 +351,20 @@
      chooses ad placement automatically, so no manual ad slot is needed here. -->
 
 <footer class="site-footer">
-  <h4 data-i18n="footer.title">VOYAGER 1 + 2 TRACKER</h4>
+  <h2 data-i18n="footer.title">VOYAGER 1 + 2 TRACKER</h2>
   <p data-i18n="footer.body">An independent educational visualization based primarily on publicly available NASA mission data. NASA is the primary source of mission information. This website is not affiliated with or operated by NASA.</p>
   <p data-i18n="footer.copyright">© 2026 Voyager Tracker</p>
 </footer>
 
-<script src="../js/astronomy.js"></script>
-<script src="../js/i18n.js"></script>
-<script src="../js/data.js"></script>
-<script src="../js/tracker.js"></script>
-<script src="../js/compare.js"></script>
-<script src="../js/timeline.js"></script>
-<script src="../js/solarsystem.js"></script>
-<script src="../js/gallery.js"></script>
-<script src="../js/content.js"></script>
-<script src="../js/app.js"></script>
+<script src="../js/astronomy.js" defer></script>
+<script src="../js/i18n.js" defer></script>
+<script src="../js/data.js" defer></script>
+<script src="../js/tracker.js" defer></script>
+<script src="../js/compare.js" defer></script>
+<script src="../js/timeline.js" defer></script>
+<script src="../js/solarsystem.js" defer></script>
+<script src="../js/gallery.js" defer></script>
+<script src="../js/content.js" defer></script>
+<script src="../js/app.js" defer></script>
 </body>
 </html>

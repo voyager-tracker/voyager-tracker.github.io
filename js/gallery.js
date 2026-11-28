@@ -1,7 +1,7 @@
 /**
  * gallery.js — filterable NASA image gallery. Images are hotlinked
  * directly from NASA's own images-assets.nasa.gov CDN (not re-hosted).
- * On load failure, shows a text fallback instead of a broken image.
+ * Uses safe DOM construction and addEventListener('error') fallbacks.
  */
 const GALLERY_CATEGORIES = [
   { key: 'all', en: 'All', zh: '全部', es: 'Todo', ja: 'すべて' },
@@ -24,38 +24,80 @@ function nasaImageUrl(id, size) {
   return `https://images-assets.nasa.gov/image/${id}/${id}~${size}.jpg`;
 }
 
+function attachImgFallback(img, fallbackText) {
+  img.addEventListener('error', () => {
+    const div = document.createElement('div');
+    div.className = 'gallery-fallback';
+    div.textContent = fallbackText;
+    img.replaceWith(div);
+  }, { once: true });
+}
+
 function renderGalleryFilters() {
   const container = document.getElementById('gallery-filters');
   if (!container) return;
   const lang = getLang();
-  container.innerHTML = GALLERY_CATEGORIES.map((c) => `
-    <button type="button" class="gallery-filter${c.key === galleryActiveFilter ? ' active' : ''}" data-cat="${c.key}">${c[lang]}</button>
-  `).join('');
-  container.querySelectorAll('.gallery-filter').forEach((btn) => {
+  const frag = document.createDocumentFragment();
+  GALLERY_CATEGORIES.forEach((c) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `gallery-filter${c.key === galleryActiveFilter ? ' active' : ''}`;
+    btn.dataset.cat = c.key;
+    btn.setAttribute('aria-pressed', c.key === galleryActiveFilter ? 'true' : 'false');
+    btn.textContent = c[lang] || c.en;
     btn.addEventListener('click', () => {
-      galleryActiveFilter = btn.dataset.cat;
+      galleryActiveFilter = c.key;
       renderGalleryFilters();
       renderGalleryGrid();
     });
+    frag.appendChild(btn);
   });
+  container.replaceChildren(frag);
 }
 
 function renderGalleryGrid() {
   const grid = document.getElementById('gallery-grid');
   if (!grid || !VOYAGER_DATA.gallery) return;
   const lang = getLang();
-  const items = VOYAGER_DATA.gallery.filter((g) => galleryActiveFilter === 'all' || g.categories.includes(galleryActiveFilter));
-  grid.innerHTML = items.map((g) => `
-    <figure class="gallery-item">
-      <img src="${nasaImageUrl(g.id, 'thumb')}" alt="${g['title_' + lang]}" loading="lazy"
-           onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'gallery-fallback',textContent:'${t('gallery.imgUnavailable')}'}));">
-      <figcaption>
-        <span class="gallery-title">${g['title_' + lang]}</span>
-        <span class="gallery-credit">${t('gallery.credit')}: ${g.credit}</span>
-        <a href="${nasaImageUrl(g.id, 'orig')}" target="_blank" rel="noopener noreferrer">${t('gallery.viewFull')} ↗</a>
-      </figcaption>
-    </figure>
-  `).join('');
+  const isKid = document.documentElement.hasAttribute('data-repo-root');
+  const items = VOYAGER_DATA.gallery.filter(
+    (g) => galleryActiveFilter === 'all' || g.categories.includes(galleryActiveFilter)
+  );
+  const frag = document.createDocumentFragment();
+  items.forEach((g) => {
+    const title = (isKid && g['title_' + lang + '_kid']) || g['title_' + lang] || g.title_en || '';
+    const fig = document.createElement('figure');
+    fig.className = 'gallery-item';
+
+    const img = document.createElement('img');
+    img.src = nasaImageUrl(g.id, 'thumb');
+    img.alt = title;
+    img.width = 400;
+    img.height = 300;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    attachImgFallback(img, t('gallery.imgUnavailable'));
+
+    const cap = document.createElement('figcaption');
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'gallery-title';
+    titleSpan.textContent = title;
+
+    const creditSpan = document.createElement('span');
+    creditSpan.className = 'gallery-credit';
+    creditSpan.textContent = `${t('gallery.credit')}: ${g.credit}`;
+
+    const link = document.createElement('a');
+    link.href = nasaImageUrl(g.id, 'orig');
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = `${t('gallery.viewFull')} ↗`;
+
+    cap.append(titleSpan, creditSpan, link);
+    fig.append(img, cap);
+    frag.appendChild(fig);
+  });
+  grid.replaceChildren(frag);
 }
 
 function renderGallery() {

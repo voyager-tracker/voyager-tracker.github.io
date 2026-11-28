@@ -1,61 +1,119 @@
 /**
- * app.js — application bootstrap: starfield, loading sequence, nav,
- * data load orchestration, and live-update intervals.
+ * app.js — application bootstrap: starfield, fast loading handoff, nav,
+ * image error fallback, data load orchestration, and live-update intervals.
  */
 (function starfield() {
   const canvas = document.getElementById('starfield');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let reduceMotion = motionQuery.matches;
   let stars = [];
+  let rafId = null;
 
   function resize() {
     const dpr = window.devicePixelRatio || 1;
     const cssW = window.innerWidth;
     const cssH = window.innerHeight;
-    canvas.width = cssW * dpr;
-    canvas.height = cssH * dpr;
+    canvas.width = Math.round(cssW * dpr);
+    canvas.height = Math.round(cssH * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = cssW < 768 ? 150 : 400;
+    const count = cssW < 768 ? 140 : 320;
     stars = Array.from({ length: count }, () => ({
       x: Math.random() * cssW,
       y: Math.random() * cssH,
-      r: Math.random() * 1.3 + 0.2,
+      r: Math.random() * 1.4 + 0.3,
       tw: Math.random() * Math.PI * 2,
-      speed: Math.random() * 0.15 + 0.02
+      speed: Math.random() * 0.08 + 0.02
     }));
+    drawFrame();
   }
 
-  function draw() {
-    const cssW = canvas.clientWidth;
-    const cssH = canvas.clientHeight;
+  function drawFrame() {
+    const cssW = canvas.clientWidth || window.innerWidth;
+    const cssH = canvas.clientHeight || window.innerHeight;
     ctx.clearRect(0, 0, cssW, cssH);
-    ctx.fillStyle = '#040711';
+    const isKid = document.documentElement.hasAttribute('data-repo-root');
+    ctx.fillStyle = isKid ? '#171347' : '#040711';
     ctx.fillRect(0, 0, cssW, cssH);
     stars.forEach((s) => {
-      const alpha = reduceMotion ? 0.7 : 0.4 + 0.6 * Math.abs(Math.sin(s.tw));
-      ctx.fillStyle = `rgba(200,220,255,${alpha})`;
+      const alpha = reduceMotion ? 0.65 : 0.35 + 0.65 * Math.abs(Math.sin(s.tw));
+      ctx.fillStyle = isKid
+        ? `rgba(255, 240, 195, ${alpha})`
+        : `rgba(200, 220, 255, ${alpha})`;
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
       ctx.fill();
       if (!reduceMotion) s.tw += s.speed;
     });
-    requestAnimationFrame(draw);
   }
 
+  function tick() {
+    if (reduceMotion || document.hidden) {
+      rafId = null;
+      return;
+    }
+    drawFrame();
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function syncLoop() {
+    if (reduceMotion || document.hidden) {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      drawFrame();
+    } else if (rafId === null) {
+      rafId = requestAnimationFrame(tick);
+    }
+  }
+
+  motionQuery.addEventListener?.('change', (e) => {
+    reduceMotion = e.matches;
+    syncLoop();
+  });
+  document.addEventListener('visibilitychange', syncLoop);
   window.addEventListener('resize', resize);
   resize();
-  draw();
+  syncLoop();
 })();
 
 function initNav() {
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
-  toggle?.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
+  if (!toggle || !menu) return;
+
+  function setMenuOpen(open) {
+    menu.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', () => {
+    setMenuOpen(!menu.classList.contains('open'));
   });
-  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  menu.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      setMenuOpen(false);
+      toggle.focus();
+    }
+  });
+}
+
+function initStaticImageFallbacks() {
+  document.querySelectorAll('img[data-fallback-text]').forEach((img) => {
+    img.addEventListener('error', () => {
+      const div = document.createElement('div');
+      div.className = 'gallery-fallback';
+      div.textContent = img.dataset.fallbackText || 'Image unavailable — view on NASA.gov';
+      img.replaceWith(div);
+    }, { once: true });
+  });
 }
 
 function initScrollReveal() {
@@ -71,41 +129,34 @@ function initScrollReveal() {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.1 });
   targets.forEach((el) => io.observe(el));
 }
 
-async function runLoadingSequence() {
+function dismissLoadingScreen() {
   const screen = document.getElementById('loading-screen');
-  const line = document.getElementById('loading-line');
-  if (!screen || !line) return;
-  const steps = ['loading.init', 'loading.v1', 'loading.v2', 'loading.estimated', 'loading.ready'];
-  for (const key of steps) {
-    line.textContent = t(key);
-    await new Promise((r) => setTimeout(r, 380));
-  }
+  if (!screen) return;
   screen.classList.add('hidden');
-  setTimeout(() => screen.remove(), 700);
+  setTimeout(() => screen.remove(), 350);
 }
 
 async function bootstrap() {
   initNav();
+  initStaticImageFallbacks();
   initSolarSystemControls();
-  // i18n must be loaded (and applied) before the loading sequence starts
-  // narrating steps via t(), and before renderAll() calls t() while
-  // building cards/tables — both would otherwise show raw i18n keys.
   await initI18n();
   applyTranslations(getLang());
-  const [loadResult] = await Promise.all([
-    loadVoyagerData(),
-    runLoadingSequence()
-  ]);
+  await loadVoyagerData();
   renderAll();
   applySolarViewTransform();
   initScrollReveal();
+  dismissLoadingScreen();
 
-  setInterval(tickOdometers, 1000);
   setInterval(() => {
+    if (!document.hidden) tickOdometers();
+  }, 1000);
+  setInterval(() => {
+    if (document.hidden) return;
     if (typeof renderFartherViz === 'function') renderFartherViz();
     if (typeof renderDistanceBetween === 'function') renderDistanceBetween();
     if (typeof drawSolarSystem === 'function') drawSolarSystem();

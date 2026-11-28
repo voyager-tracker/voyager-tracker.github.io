@@ -15,26 +15,98 @@ const VOYAGER_DATA = {
 
 const INLINE_FALLBACK = {
   voyager1: {
-    id: 'voyager1', name: { en: 'Voyager 1', zh: '航海家1號' },
-    launch: { date: '1977-09-05', vehicle: 'Titan IIIE-Centaur', site_en: 'Cape Canaveral, Florida', site_zh: '美國佛羅里達州卡納維爾角' },
+    id: 'voyager1',
+    name: { en: 'Voyager 1', zh: '航海家1號', es: 'Voyager 1', ja: 'ボイジャー1号' },
+    launch: {
+      date: '1977-09-05',
+      vehicle: 'Titan IIIE-Centaur',
+      site_en: 'Cape Canaveral, Florida',
+      site_zh: '美國佛羅里達州卡納維爾角',
+      site_es: 'Cabo Cañaveral, Florida',
+      site_ja: 'フロリダ州ケープカナベラル'
+    },
     massKg: 733, escapeRateAUyr: 3.5, speedKmS: 16.9, speedKmH: 61000,
-    direction: { eclipticAngleDeg: 35, hemisphere: 'north', note_en: 'About 35° north of the ecliptic plane.', note_zh: '位於黃道面以北約35度。' },
+    direction: {
+      eclipticAngleDeg: 35,
+      hemisphere: 'north',
+      note_en: 'About 35° north of the ecliptic plane.',
+      note_zh: '位於黃道面以北約35度。',
+      note_es: 'Aproximadamente 35° al norte del plano de la eclíptica.',
+      note_ja: '黄道面より北へ約35度。'
+    },
     interstellar: { date: '2012-08-25' },
-    baseline: { date: '2026-04-17', distanceFromEarthKm: 25900000000, distanceFromEarthAU: 173.1, distanceFromSunAU: 173.1, signalDelayOneWayHours: 24.0, source: 'NASA Science', sourceUrl: 'https://science.nasa.gov/mission/voyager/' },
-    status: { en: 'Extended Mission — Interstellar Space', zh: '延伸任務中 — 位於星際空間' },
+    baseline: {
+      date: '2026-04-17',
+      distanceFromEarthKm: 25900000000,
+      distanceFromEarthAU: 173.1,
+      distanceFromSunAU: 173.1,
+      signalDelayOneWayHours: 24.0,
+      source: 'NASA Science',
+      sourceUrl: 'https://science.nasa.gov/mission/voyager/'
+    },
+    status: {
+      en: 'Extended Mission — Interstellar Space',
+      zh: '延伸任務中 — 位於星際空間',
+      es: 'Misión extendida — Espacio interestelar',
+      ja: '延長ミッション中 — 星間空間'
+    },
+    power: {
+      source_en: '3 × MHW-RTG (Plutonium-238)',
+      source_zh: '3 具 MHW-RTG 放射性同位素熱電機（鈽-238）',
+      source_es: '3 × MHW-RTG (Plutonio-238)',
+      source_ja: 'MHW-RTG × 3（プルトニウム238）',
+      declineWattsPerYear: 4
+    },
     instruments: { totalExperiments: 11, active: [], inactive: [] },
-    trajectory: [], color: '#4fd1ff'
+    trajectory: [],
+    color: '#4fd1ff'
   },
   voyager2: {
-    id: 'voyager2', name: { en: 'Voyager 2', zh: '航海家2號' },
-    launch: { date: '1977-08-20', vehicle: 'Titan IIIE-Centaur', site_en: 'Cape Canaveral, Florida', site_zh: '美國佛羅里達州卡納維爾角' },
+    id: 'voyager2',
+    name: { en: 'Voyager 2', zh: '航海家2號', es: 'Voyager 2', ja: 'ボイジャー2号' },
+    launch: {
+      date: '1977-08-20',
+      vehicle: 'Titan IIIE-Centaur',
+      site_en: 'Cape Canaveral, Florida',
+      site_zh: '美國佛羅里達州卡納維爾角',
+      site_es: 'Cabo Cañaveral, Florida',
+      site_ja: 'フロリダ州ケープカナベラル'
+    },
     massKg: 721.9, escapeRateAUyr: 3.1, speedKmS: 15.4, speedKmH: 55000,
-    direction: { eclipticAngleDeg: 48, hemisphere: 'south', note_en: 'About 48° south of the ecliptic plane.', note_zh: '位於黃道面以南約48度。' },
+    direction: {
+      eclipticAngleDeg: 48,
+      hemisphere: 'south',
+      note_en: 'About 48° south of the ecliptic plane.',
+      note_zh: '位於黃道面以南約48度。',
+      note_es: 'Aproximadamente 48° al sur del plano de la eclíptica.',
+      note_ja: '黄道面より南へ約48度。'
+    },
     interstellar: { date: '2018-11-05' },
-    baseline: { date: '2017-11-05', distanceFromEarthKm: 17378000000, distanceFromEarthAU: 116.167, distanceFromSunAU: 116.167, signalDelayOneWayHours: 16.1, source: 'NASA Science', sourceUrl: 'https://science.nasa.gov/mission/voyager/' },
-    status: { en: 'Extended Mission — Interstellar Space', zh: '延伸任務中 — 位於星際空間' },
+    baseline: {
+      date: '2017-11-05',
+      distanceFromEarthKm: 17378000000,
+      distanceFromEarthAU: 116.167,
+      distanceFromSunAU: 116.167,
+      signalDelayOneWayHours: 16.1,
+      source: 'NASA Science',
+      sourceUrl: 'https://science.nasa.gov/mission/voyager/'
+    },
+    status: {
+      en: 'Extended Mission — Interstellar Space',
+      zh: '延伸任務中 — 位於星際空間',
+      es: 'Misión extendida — Espacio interestelar',
+      ja: '延長ミッション中 — 星間空間'
+    },
+    power: {
+      source_en: '3 × MHW-RTG (Plutonium-238)',
+      source_zh: '3 具 MHW-RTG 放射性同位素熱電機（鈽-238）',
+      source_es: '3 × MHW-RTG (Plutonio-238)',
+      source_ja: 'MHW-RTG × 3（プルトニウム238）',
+      declineWattsPerYear: 4
+    },
     instruments: { totalExperiments: 11, active: [], inactive: [] },
-    trajectory: [], color: '#ffb84f'
+    trajectory: [],
+    color: '#ffb84f'
   },
   mission: { goldenRecord: {}, paleBlueDot: {}, deepSpaceNetwork: { stations: [] }, missionUpdates: [] },
   sources: {
@@ -45,9 +117,10 @@ const INLINE_FALLBACK = {
 };
 
 const SITE_ROOT = document.documentElement.getAttribute('data-site-root') || './';
+const DATA_ROOT = document.documentElement.getAttribute('data-repo-root') || SITE_ROOT;
 
 async function fetchJson(path) {
-  const res = await fetch(SITE_ROOT + path, { cache: 'no-cache' });
+  const res = await fetch(DATA_ROOT + path, { cache: 'no-cache' });
   if (!res.ok) throw new Error('HTTP ' + res.status + ' for ' + path);
   return res.json();
 }

@@ -1,11 +1,6 @@
 /**
  * solarsystem.js — schematic 2D/3D solar-system visualization.
- * This is an educational schematic, NOT a precision ephemeris: planets
- * are placed along a fixed reference heading, and each Voyager is drawn
- * along its NASA-published escape heading (north/south of the ecliptic)
- * at a radius derived from its calculated current distance. The "3D"
- * mode is a CSS perspective tilt of the same 2D drawing, with drag-to-
- * rotate — a visual aid, not a true 3D ephemeris renderer.
+ * Educational schematic (not a precision ephemeris).
  */
 const PLANETS = [
   { name_en: 'Earth', name_zh: '地球', name_es: 'Tierra', name_ja: '地球', au: 1 },
@@ -18,6 +13,7 @@ const HELIOPAUSE_AU = 120;
 const PLANET_ANGLE_DEG = -15;
 const V1_ANGLE_DEG = -55;
 const V2_ANGLE_DEG = 55;
+const CANVAS_MONO_FONT = 'Consolas, "SFMono-Regular", ui-monospace, monospace';
 
 let solarState = { view: '2d', scaleMode: 'log', rotY: 0, rotX: 18 };
 const SOLAR_ROT_X_MIN = -10, SOLAR_ROT_X_MAX = 60;
@@ -42,8 +38,8 @@ function drawSolarSystem() {
   const dpr = window.devicePixelRatio || 1;
   const cssW = canvas.parentElement.clientWidth || 320;
   const cssH = Math.max(320, Math.min(560, cssW * 0.62));
-  canvas.width = cssW * dpr;
-  canvas.height = cssH * dpr;
+  canvas.width = Math.round(cssW * dpr);
+  canvas.height = Math.round(cssH * dpr);
   canvas.style.width = cssW + 'px';
   canvas.style.height = cssH + 'px';
   const ctx = canvas.getContext('2d');
@@ -56,14 +52,14 @@ function drawSolarSystem() {
   const v1 = VOYAGER_DATA.voyager1, v2 = VOYAGER_DATA.voyager2;
   const e1 = currentEstimate(v1), e2 = currentEstimate(v2);
 
-  ctx.strokeStyle = 'rgba(120,170,220,0.25)';
+  ctx.strokeStyle = 'rgba(120,170,220,0.28)';
   ctx.setLineDash([4, 6]);
   ctx.beginPath();
   ctx.arc(cx, cy, ssRadius(HELIOPAUSE_AU, maxR, solarState.scaleMode), 0, Math.PI * 2);
   ctx.stroke();
   ctx.setLineDash([]);
-  ctx.fillStyle = 'rgba(180,210,255,0.55)';
-  ctx.font = '11px "Space Mono", monospace';
+  ctx.fillStyle = 'rgba(195,220,255,0.7)';
+  ctx.font = `11px ${CANVAS_MONO_FONT}`;
   ctx.fillText(t('solar.legendHeliopause'), cx + ssRadius(HELIOPAUSE_AU, maxR, solarState.scaleMode) * 0.6, cy - 8);
 
   const sunPos = { x: cx, y: cy };
@@ -80,18 +76,18 @@ function drawSolarSystem() {
     const pos = polar(cx, cy, r, PLANET_ANGLE_DEG);
     ctx.fillStyle = '#8fb4e0';
     ctx.beginPath();
-    ctx.arc(pos.x, pos.y, 3.2, 0, Math.PI * 2);
+    ctx.arc(pos.x, pos.y, 3.4, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = 'rgba(220,235,255,0.8)';
-    ctx.font = '10px "Space Mono", monospace';
-    ctx.fillText(p['name_' + lang], pos.x + 6, pos.y - 6);
+    ctx.fillStyle = 'rgba(225,238,255,0.88)';
+    ctx.font = `10px ${CANVAS_MONO_FONT}`;
+    ctx.fillText(p['name_' + lang] || p.name_en, pos.x + 6, pos.y - 6);
   });
 
   function drawVoyager(v, est, angle) {
     const r = ssRadius(est.au, maxR, solarState.scaleMode);
     const pos = polar(cx, cy, r, angle);
     ctx.strokeStyle = v.color;
-    ctx.globalAlpha = 0.6;
+    ctx.globalAlpha = 0.65;
     ctx.beginPath();
     ctx.moveTo(sunPos.x, sunPos.y);
     ctx.lineTo(pos.x, pos.y);
@@ -99,14 +95,14 @@ function drawSolarSystem() {
     ctx.globalAlpha = 1;
     ctx.fillStyle = v.color;
     ctx.beginPath();
-    ctx.arc(pos.x, pos.y, 5, 0, Math.PI * 2);
+    ctx.arc(pos.x, pos.y, 5.5, 0, Math.PI * 2);
     ctx.fill();
     ctx.strokeStyle = '#fff';
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 1.2;
     ctx.stroke();
     ctx.fillStyle = v.color;
-    ctx.font = 'bold 11px "Space Mono", monospace';
-    ctx.fillText(v.name[lang], pos.x + 8, pos.y + 4);
+    ctx.font = `bold 11px ${CANVAS_MONO_FONT}`;
+    ctx.fillText(v.name[lang] || v.name.en, pos.x + 8, pos.y + 4);
     return pos;
   }
   drawVoyager(v1, e1, V1_ANGLE_DEG);
@@ -124,14 +120,6 @@ function applySolarViewTransform() {
   }
 }
 
-/**
- * The schematic canvas above is our own simplified, non-precision
- * visualization. This loads NASA/JPL's actual "Eyes on the Solar System"
- * 3D tool (eyes.nasa.gov) in an iframe — the real thing, with a real
- * spacecraft model and full mouse-drag orbit controls — but only once
- * the visitor asks for it, since it's a heavy third-party WebGL app we
- * don't want to force onto every single page load.
- */
 function initEyesEmbed() {
   const container = document.getElementById('eyes-embed');
   const btn = document.getElementById('eyes-embed-load');
@@ -143,8 +131,7 @@ function initEyesEmbed() {
     iframe.loading = 'lazy';
     iframe.allow = 'fullscreen';
     iframe.className = 'eyes-embed__iframe';
-    container.innerHTML = '';
-    container.appendChild(iframe);
+    container.replaceChildren(iframe);
   }, { once: true });
 }
 
@@ -157,14 +144,36 @@ function initSolarSystemControls() {
   const resetBtn = document.getElementById('solar-reset');
   const wrap = document.getElementById('solar-canvas-wrap');
 
-  view2d?.addEventListener('click', () => { solarState.view = '2d'; view2d.classList.add('active'); view3d.classList.remove('active'); applySolarViewTransform(); });
+  view2d?.addEventListener('click', () => {
+    solarState.view = '2d';
+    view2d.classList.add('active');
+    view3d?.classList.remove('active');
+    applySolarViewTransform();
+  });
   view3d?.addEventListener('click', () => {
     if (window.innerWidth < 768) return;
-    solarState.view = '3d'; view3d.classList.add('active'); view2d.classList.remove('active'); applySolarViewTransform();
+    solarState.view = '3d';
+    view3d.classList.add('active');
+    view2d?.classList.remove('active');
+    applySolarViewTransform();
   });
-  scaleReal?.addEventListener('click', () => { solarState.scaleMode = 'real'; scaleReal.classList.add('active'); scaleLog.classList.remove('active'); drawSolarSystem(); });
-  scaleLog?.addEventListener('click', () => { solarState.scaleMode = 'log'; scaleLog.classList.add('active'); scaleReal.classList.remove('active'); drawSolarSystem(); });
-  resetBtn?.addEventListener('click', () => { solarState.rotY = 0; solarState.rotX = 18; applySolarViewTransform(); });
+  scaleReal?.addEventListener('click', () => {
+    solarState.scaleMode = 'real';
+    scaleReal.classList.add('active');
+    scaleLog?.classList.remove('active');
+    drawSolarSystem();
+  });
+  scaleLog?.addEventListener('click', () => {
+    solarState.scaleMode = 'log';
+    scaleLog.classList.add('active');
+    scaleReal?.classList.remove('active');
+    drawSolarSystem();
+  });
+  resetBtn?.addEventListener('click', () => {
+    solarState.rotY = 0;
+    solarState.rotX = 18;
+    applySolarViewTransform();
+  });
 
   if (wrap) {
     let dragging = false, lastX = 0, lastY = 0;
@@ -185,9 +194,6 @@ function initSolarSystemControls() {
       applySolarViewTransform();
     });
 
-    // Keyboard equivalent of the drag gesture, for people who can't (or
-    // don't want to) drag with a mouse/touch — arrow keys nudge the same
-    // rotX/rotY the pointer handlers above control.
     const KEY_STEP_DEG = 8;
     wrap.addEventListener('keydown', (e) => {
       if (solarState.view !== '3d') return;
@@ -198,7 +204,7 @@ function initSolarSystemControls() {
       else if (e.key === 'ArrowDown') solarState.rotX = Math.max(SOLAR_ROT_X_MIN, solarState.rotX - KEY_STEP_DEG);
       else handled = false;
       if (handled) {
-        e.preventDefault(); // stop arrow keys from also scrolling the page
+        e.preventDefault();
         applySolarViewTransform();
       }
     });

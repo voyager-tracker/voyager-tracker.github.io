@@ -5,26 +5,43 @@
 }
 
 @media (max-width: 768px) {
-  .navbar__menu { position: fixed; top: 62px; left: 0; right: 0; background: rgba(4,7,17,0.98); flex-direction: column; gap: 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; border-bottom: 1px solid var(--c-border); }
-  .navbar__menu.open { max-height: 480px; }
-  .navbar__menu li { border-bottom: 1px solid var(--c-border); }
-  .navbar__menu a { display: block; padding: 14px 24px; }
+  .navbar__menu {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    right: 0;
+    background: rgba(23, 19, 71, 0.98);
+    flex-direction: column;
+    gap: 0;
+    block-size: 0;
+    overflow: hidden;
+    border-bottom: 3px solid var(--c-yellow);
+  }
+  .navbar__menu.open {
+    block-size: auto;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .navbar__menu {
+      transition: block-size 0.3s ease;
+    }
+  }
+  .navbar__menu li { border-bottom: 2px dashed var(--c-border); }
+  .navbar__menu a { display: block; padding: 0.9rem 1.5rem; border-radius: 0; }
   .nav-toggle { display: inline-flex; }
-  .lang-toggle-btn { padding: 8px 12px; min-width: 44px; }
-  .edition-toggle { padding: 5px 9px; font-size: 0.72rem; }
-  .navbar { padding: 10px 14px; }
-  .navbar__brand-main { font-size: 0.9rem; }
+  .lang-toggle-btn { padding: 0.45rem 0.75rem; min-width: 44px; }
+  .edition-toggle { padding: 0.3rem 0.65rem; font-size: 0.76rem; }
+  .navbar { padding: 0.65rem 0.9rem; }
+  .navbar__brand-main { font-size: 1rem; }
 
   .tracker-grid, .odometer-grid, .trajectory-grid, .signal-grid,
   .science-grid, .power-grid, .status-grid { grid-template-columns: 1fr; }
 
-  .hero__craft-row { gap: 30px; }
-  .section { padding: 50px 16px; }
+  .hero__craft-row { gap: 0.85rem; }
+  .section { padding: 3rem 1rem; }
   .methodology-grid { grid-template-columns: 1fr; }
-  table.compare-table { font-size: 0.8rem; }
+  table.compare-table { font-size: 0.86rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
